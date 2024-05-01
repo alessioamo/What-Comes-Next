@@ -3,8 +3,8 @@ name: Check Discussion Updates
 on:
   schedule:
     # - cron: '0 0 * * *' # Runs daily at midnight UTC
-    # - cron: '* * * * *' # Runs every minute
-    - cron: '*/2 * * * *' # Runs every 2 minutes
+    - cron: '* * * * *' # Runs every minute
+    # - cron: '*/2 * * * *' # Runs every 2 minutes
 
 
 
