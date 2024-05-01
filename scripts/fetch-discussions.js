@@ -1,4 +1,7 @@
-fetch('https://api.github.com/repos/alessioamo/What-Comes-Next/discussions')
+const owner = 'alessioamo'; // Replace with the owner of the repository
+const repo = 'What-Comes-Next'; // Replace with the name of the repository
+
+fetch(`https://api.github.com/repos/${owner}/${repo}/discussions`)
     .then(response => {
         if (!response.ok) {
             throw new Error(`Failed to fetch discussions. Status: ${response.status} ${response.statusText}`);
@@ -6,7 +9,7 @@ fetch('https://api.github.com/repos/alessioamo/What-Comes-Next/discussions')
         return response.json();
     })
     .then(data => {
-        // Process the fetched data
+        // Process the fetched discussions
         console.log('Fetched discussions:', data);
         // Add more processing logic here if needed
     })
