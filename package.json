@@ -1,0 +1,23 @@
+{
+  "name": "What-Comes-Next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alessioamo/What-Comes-Next.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alessioamo/What-Comes-Next/issues"
+  },
+  "homepage": "https://github.com/alessioamo/What-Comes-Next#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
