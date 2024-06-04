@@ -1,0 +1,13 @@
+There are 2 hard problems in computer science: cache invalidation, naming things, and off-by-1 errors.
+Hardware eventually fails. Software eventually works.
+DONE - Give a man a program, and he'll be frustrated for a day. Teach a man to program, and he'll be frustrated for a lifetime.
+Programming is the art of adding bugs to an empty text file.
+Months of testing and bug fixes can save you hours of planning.
+Hours of trial and error will save you minutes of reading documentation.
+Debugging is like being a detective in a crime movie where you're also the murderer.
+I have a weird bug in my program where when I solve one bug, three more appear somewhere else.
+A programmer will spend a week creating a program to automate something that would've taken less than an hour to complete manually.
+If your program has errors when running but it still works, you have a working program.
+Code doesn't need to be pretty to function.
+Sometimes doing what is easiest works the best.
+If the developer of Undertale can sell over 3.5 million copies by using one massive switch statement spanning thousands of lines for dialogue, you can do it also.
