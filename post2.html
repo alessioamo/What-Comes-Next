@@ -110,12 +110,12 @@
 						<!-- <a class="link-dark" href="author.html"></a><a href="#" class="btn follow">Follow</a> -->
 						<a class="link-dark" href="author.html">Alessio</a><br>
 						<span class="author-description">Just a developer who loves to create unique things!</span><br>
-						<span class="post-date">19 June 2024</span><span class="dot"></span><span class="post-read">todo min read</span>
+						<span class="post-date">3 July 2024</span><span class="dot"></span><span class="post-read">6 min read</span>
 					</div>
 				</div>
 				<!-- End Top Menta -->
 
-				<h1 class="posttitle">How to Add Comments to Your Static Site</h1>
+				<h1 class="posttitle">How to Add Comments to Your Static Website</h1>
 
 			</div>
 
@@ -126,8 +126,110 @@
 			<!-- Begin Post Content -->
 			<div class="article-post">
 				<p>
-					Coming soon!
+					As my first “official” blog post, I thought it would be interesting to explore a topic that I actually used for this website. When creating the site, one thing that I really wanted to add to it were comments. A blog is not a blog without a way for users to interact with the writer and each other and thus, I believed it was necessary to add it in. (To skip directly to the tutorial section, <a href="#tutorialStart">click here!</a>)
 				</p>
+					
+				<p>
+					The problem with trying to add comments to this site is that it is a static webpage. For those that do not understand what this means, in simple terms, a static website is a site that is delivered to users exactly the way it is stored, they do not involve any server-side processing, or database interactions, and every visitor will see the same content.
+				</p>
+					
+				<p>
+					Some examples of static websites include documentation websites, article pages, personal portfolios, and - well this blog! The other type of websites are dynamic websites which are essentially the opposite and have much more functionalities and capabilities than static websites. These however need to be hosted which can either be done locally, or through other companies such as WordPress, Amazon Web Services, and more.
+				</p>
+					
+				<p>
+					Since they need to be hosted, they will generally cost money (even if it is done locally because you need a computer or server to host the website 24/7 which can have its own costs). All this to say, a static website was the ideal choice for this blog instead of a dynamic one.
+				</p>
+					
+				<p>
+					Returning to the issue at hand of adding comments, doing so with a static website would be more difficult than with a dynamic one because for a dynamic one, there are many simple solutions such as storing comments in a database and loading them whenever a user loads the page. However, since static websites display the information that is already stored, they are not able to take in new information from users to then update the website (at least not on their own).
+				</p>
+					
+				<p>
+					So to the main point of this post, how can one add comments to a static site? Well there are many options out there, some better than others, but I will provide what I think is the best for a fully static setup. My main criteria were that it has to be a free method, has to have a reply feature, a reaction feature, and ideally no login required.
+				</p>
+					
+				<p>
+					The first candidate I explored was <a href="https://disqus.com/" target="_blank">Disqus</a> which is a very popular commenting system that has a lot of features to it. However, an issue I saw with it was that you had to enter your email in order to leave a comment and Disqus is known for sharing user comments data. On top of this, I found it difficult to integrate it fully within a GitHub Pages website, but that might have just been me.
+				</p>
+					
+				<p>
+					Another candidate that had a lot of promise was <a href="https://staticman.net/" target="_blank">Staticman</a>.The way it works is that when someone leaves a comment on your website, a bot will then take that comment to GitHub and store it in your repository. Whenever a new comment is added to GitHub, there is a trigger that will automatically rebuild the website with the new comment. This works very well and it is also free and since the comments are stored within your repository, there is no worry of your data being shared. However, some downsides to it are that it can take quite some time to code and implement it into your site, there is no dashboard for it, and it still requires some sort of hosting to function. The last point is not a huge issue as there are many free hosting options for things like this, however the documentation for Staticman is outdated and solely relies on using Heroku for free hosting, which they do not offer anymore.
+				</p>
+					
+				<p>
+					Finally, the last candidate I looked at was <a href="https://giscus.app/" target="_blank">Giscus</a>. This is similar to how Staticman works but instead of using a bot to read and store comments, it uses GitHub Discussions. Essentially, when a user comments on your site, they are adding a comment to a GitHub Discussions page which in turn gets displayed on your website. The downside to this is that it requires a GitHub account in order to leave comments.
+				</p>
+					
+				<p id="tutorialStart">
+					Overall, I did a lot of research and the best option I found was Giscus. It filled all of my criteria of being free, easy to use and implement, a variety of features, and protection of data. All of my criteria except for anonymous comments. I thought about it for a while and decided that this was not too big of an issue. For the most part, the people that would be reading this are most likely programmers themselves (I hope) and they most definitely already have a GitHub account (I really hope). On top of this, GitHub accounts are extremely easy to create so if someone is passionate enough to leave a comment and does not have an account, then it would be easy to do so.
+				</p>
+					
+				<blockquote>
+					Hardware eventually fails. Software eventually works.
+				</blockquote>
+					
+				<p>
+					Now onto the fun part, how to actually implement Giscus into your static site. The first step is to visit the Giscus <a href="https://giscus.app/" target="_blank">home page</a> and connect your repository by entering your username followed by the repository name (note that Giscus only works with pages hosted on GitHub Pages, however this is free to do and you can even use custom domains if you own them, so I believe this is the best option for free hosting). In order to connect it: 1: Your repository must be public. 2: The Giscus app must be installed. 3: The Discussions feature must be enabled.
+				</p>
+					
+				<p>
+					1: Go to your repository -> Settings -> General -> Scroll to Danger Zone -> Change visibility to public.
+				</p>
+
+				<div class="container-image">
+					<img src="assets/img/comments-post-1.png">
+				</div>
+				<br>
+					
+				<p>
+					2: Visit <a href="https://github.com/apps/giscus" target="_blank">Giscus </a> and press Configure -> Scroll to Repository access and grant access to your specific repository.
+				</p>
+
+				<div class="container-image">
+					<img src="assets/img/comments-post-2.png">
+				</div>
+				<br>
+					
+				<p>
+					3: Go to your repository -> Settings -> General -> Scroll to Features -> Check off Discussions and click Set up discussions.
+				</p>
+
+				<div class="container-image">
+					<img src="assets/img/comments-post-3.png">
+				</div>
+				<br>
+					
+				<p>
+					Once these steps are complete, return to the main Giscus page and enter your repository name and you will get a green message saying that it is successfully linked.
+				</p>
+
+				<div class="container-image">
+					<img src="assets/img/comments-post-4.png">
+				</div>
+				<br>
+				
+				<p>
+					In the next section, select the first option “Discussion title contains page pathname”. Next, under <i>Discussion Category</i>, I like to select General as this will allow first time comments on a page to automatically create a new Discussion however you can select whichever you prefer.
+				</p>
+					
+				<p>
+					If you select Announcements, you will have to manually create a new Discussion on GitHub for each of your pages and name the title the same name as your pathname. For example, if your website page is myblog.com/cool-post, then the title of your Discussion must be <code>“cool-post”</code>. There are definitely ways to automate this but I find that using General instead of Announcements is simpler and works just as well.
+				</p>
+				
+				<div class="container-image">
+					<img src="assets/img/comments-post-5.png">
+				</div>
+				<br>
+					
+				<p>
+					Finally, you can enable/disable the <i>Features</i> you would like, as well as select your <i>Theme</i>. I prefer to enable “Enable reactions for the main post” and “Place the comment box above the comments”, as well as using the “Preferred Color Scheme” for Theme. Once complete, you will be provided a <code>&lt;script&gt;</code> underneath <i>Enable giscus</i>. You can now paste this script directly in your code wherever you would like your comment section to be. It is recommended to enclose the script within a div element so that you can freely edit its css attributes.
+				</p>
+					
+				<p>
+					And now you are done! You and others should now be able to add comments and reactions on your static website. Thank you again for stopping by and if you made it all the way here, I hope I was able to help. Feel free to leave a comment if you have a question, concern, or just want to try out this cool feature! See you next post!
+				</p>
+					
 			</div>
 			<!-- End Post Content -->
 
@@ -176,7 +278,7 @@
 			data-strict="0"
 			data-reactions-enabled="1"
 			data-emit-metadata="0"
-			data-input-position="bottom"
+			data-input-position="top"
 			data-theme="preferred_color_scheme"
 			data-lang="en"
 			crossorigin="anonymous"
