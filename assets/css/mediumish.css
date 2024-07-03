@@ -497,3 +497,18 @@ ul.tags li a:hover {
     -webkit-line-clamp: 2; /* Number of lines to show */
     -webkit-box-orient: vertical;
 }
+
+/* img css */
+.container-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	border: 1px #09ab75 solid;
+	border-radius: 10px;
+}
+.container-image img {
+	max-width: 100%;
+	max-height: 100%;
+}
+/* img css */
