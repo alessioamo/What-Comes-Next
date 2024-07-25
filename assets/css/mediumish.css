@@ -463,11 +463,12 @@ ul.tags li a:hover {
 }
 
 /* TODO - remove this class css when at 3 or more posts in featured */
-.listfeaturedtag {
+/* .listfeaturedtag {
 	display: flex;
 	flex-direction: row;
-}
+} */
 
+/* can remove this for better spacing on home page, but changes related sections */
 .card,
 .listrecent .card {
     display: flex;
