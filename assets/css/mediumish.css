@@ -513,3 +513,30 @@ ul.tags li a:hover {
 	max-height: 100%;
 }
 /* img css */
+
+/* Other CSS */
+.boldItalic {
+	font-weight: bold;
+	font-style: italic;
+}
+/* Other CSS */
+
+/* Code CSS */
+code {
+	font-family: Consolas,"courier new";
+	color: crimson;
+	background-color: #f1f1f1;
+	padding: 2px;
+	font-size: 105%;
+}
+
+.codeElement {
+	color: blue;
+}
+.codeAttribute {
+	color: rgb(0, 183, 255);
+}
+.codeString {
+	color: orange;
+}
+/* Code CSS */

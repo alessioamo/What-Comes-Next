@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
+<meta name="keywords" content="blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation,
+								what, comes, come, next, what comes next, what come next,
+								seo, search, engine, optimize, optimization, optimise, optimisation, search engine, search engine optimization, search engine optimisation,
+								google, console, google search, google console, google search console, search console, index, indexing, website index, web index, webpage index,
+								crawl, crawling, url, sitemap, sitemap.xml, sitemap generator, meta tag, robots.txt, description, keywords, add website to google, search results,
+								google search results">
 <meta name="author" content="">
 <link rel="icon" href="assets/img/favicon.ico">
 <title>What Comes Next</title>
@@ -110,7 +116,7 @@
 						<!-- <a class="link-dark" href="author.html"></a><a href="#" class="btn follow">Follow</a> -->
 						<a class="link-dark" href="author.html">Alessio</a><br>
 						<span class="author-description">Just a developer who loves to create unique things!</span><br>
-						<span class="post-date">31 July 2024</span><span class="dot"></span><span class="post-read">todo min read</span>
+						<span class="post-date">31 July 2024</span><span class="dot"></span><span class="post-read">7 min read</span>
 					</div>
 				</div>
 				<!-- End Top Menta -->
@@ -126,15 +132,144 @@
 			<!-- Begin Post Content -->
 			<div class="article-post">
 				<p>
-					Coming soon!
+					So you finally finished your website that you have spent a while working on and it looks great! Everything is working nice and the site is being hosted online so you can visit it through the link. You are proud of the work you have done, as you should be, but there’s one problem now. When you look up your website on Google, it does not show up. You even try to write the link directly in the search bar and not even that works. The reason why this is happening is because your website is not indexed.
 				</p>
+				
+				<p>
+					If you do not know what indexing is, it is simply the process of search engines storing and organizing web pages so that when users search something, they can be retrieved and shown in the search results. When you create and host a website, it is not indexed and that’s why it is not showing up on Google. In this post, I will show you how to index your pages, as well as enhance the SEO (search engine optimization) of your website so it can reach the top of the Google search results.
+				</p>
+				
+				<p>
+					The first step is to have your website be ready to go and hosted somewhere whether it is locally, through GitHub Pages, or another web hosting platform. Once that is complete, you must visit <a href="https://search.google.com/search-console/about" target="_blank">Google Search Console</a> and click on Start Now. You will need to sign into a Google account to proceed.
+				</p>
+				
+				<p>
+					Once signed in, you must click the dropdown at the top left of the page and select Add Property. Here you will be prompted to select the property type between Domain and URL Prefix. The difference between the two is that Domain will track your entire website while the URL Prefix will only track that specific URL. You can select which is better for you but generally, Domain will be best.
+				</p>
+				
+				<p>
+					Once you enter your website’s URL, a popup will appear. This popup is so that you can verify that you own this domain. For Step 1, select TXT for the record type. From here on, if you are using a domain provider such as godaddy.com, you can sign in and paste the TXT record from Step 3 into the DNS configuration for your website. Another method of verifying can be to copy the TXT record and paste it directly into your webpage’s main html file.
+				</p>
+				
+				<div class="container-image">
+					<img src="assets/img/seo-post-1.png">
+				</div>
+				<br>
+
+				<p>
+					The record will have a format similar to this: <code>google-site-verification=033yd_b9mml_1j1seutGgssm0eBD6X1KQLAeGajg_cQ</code>
+					In the <code><head></code> tag of your html file, you can paste the following:
+					<br>
+					<code>
+						<<span class="codeElement">meta</span> <span class="codeAttribute">name=</span><span class="codeString">"google-site-verification"</span> <span class="codeAttribute">content=</span><span class="codeString">"033yd_b9mml_1j1seutGgssm0eBD6X1KQLAeGajg_cQ"</span> />
+					</code>
+					<br>
+					Where <code><span class="codeAttribute">name</span></code> is <code><span class="codeString">google-site-verification</span></code> and <code><span class="codeAttribute">content</span></code> is all the characters after the = sign from the TXT record.
+				</p>
+				
+				<p>
+					Once this is complete, you can click on Verify to proceed. If done correctly, you will move on to the next section. If is does not work, you can try waiting for a few hours or re-try the above steps.
+				</p>
+				
+				<p>
+					After verifying, you will be brought to your overview page for your website. You will see that it is processing data and to check again in a day or so. Generally it can take anywhere from 1 day to a week for statistics to start showing up so there is no need to panic. The next step you can take to help improve the SEO of your site is to submit a sitemap.
+				</p>
+				
+				<div class="container-image">
+					<img src="assets/img/seo-post-2.png">
+				</div>
+				<br>
+				
+				<p>
+					A sitemap is a file that you can submit that contains information about your website and the pages of your website and the relationships between them. It allows search engines to crawl through your website and helps index it. To submit a sitemap you can lookup sitemap generators online (or just visit <a href="https://www.xml-sitemaps.com/" target="_blank">this one</a>) to create one. You can enter the link of your website and it will generate a sitemap.xml file that contains the information of your website and all associated pages.
+				</p>
+				
+				<p>
+					Once downloaded, you can upload this file to the same location as your main website’s page. Then, in Google Search Console you can find the Sitemaps tab where you can enter the name and location of your sitemap file. After submitting, if successful, it will now appear under your submitted sitemaps. If it does not work, try to re-generate the file or place it somewhere else in your files and update the link accordingly.
+				</p>
+				
+				<p>
+					At this point, you have completed the basics and your website should be indexed! Keep in mind that it can take a few days, to a few weeks for it to officially be indexed. You can view the status of your indexing on your Overview tab or in your Pages tab. In order to test if your website is indexed, you can also type <code>site:sitename</code> into Google where sitename is the link of your website. When adding new pages to your site, you can also regenerate and re-submit the sitemap to add the new pages to it.
+				</p>
+				
+				<blockquote>
+					Code doesn't need to be pretty to function, but you will thank your past self if it is.
+				</blockquote>
+				
+				<p>
+					If you notice that your pages are not being indexed, there is a way to solve it. In the search bar of Google Search Console, you can directly paste the link of the page that is not indexed. From here, you might see the image below.
+				</p>
+				
+				<div class="container-image">
+					<img src="assets/img/seo-post-3.png">
+				</div>
+				<br>
+				
+				<p>
+					You can click on Test Live URL to make sure that your URL exists and that Google can access it. If successful, you will see the following:
+				</p>
+				
+				<div class="container-image">
+					<img src="assets/img/seo-post-1.png">
+				</div>
+				<br>
+				
+				<p>
+					Then you can click on Request Indexing in order for the page to be indexed. Again, this can take anywhere from a few minutes, to a few days so do not be rushed for this. If it does not work, you will be shown the reason why and from there, you can act accordingly to solve them.
+				</p>
+				
+				<p>
+					Note that I have had some issues in the past to index pages that have had <code>../</code> accessors within the code to access other files so if you have these and are encountering issues, that may be the case.
+				</p>
+				
+				<p>
+					Now that you have indexed your site, there are some steps you can take to optimize it. The first is to include meta tags in your code. The important tags are <code>description</code> and <code>keywords</code>:
+					<br>
+					<code>
+						<<span class="codeElement">meta</span> <span class="codeAttribute">name=</span><span class="codeString">"description"</span> <span class="codeAttribute">content=</span><span class="codeString">"A blog that follows a Computer Science graduate and explores What Comes Next"</span>>
+						<br>
+						<<span class="codeElement">meta</span> <span class="codeAttribute">name=</span><span class="codeString">"keywords"</span> <span class="codeAttribute">content=</span><span class="codeString">"blog, computer, science, student, computer science, computer science student, graduate, graduation, grad"</span>>
+					</code>
+				</p>
+				
+				<p>
+					In the content section for description, you can type the description of your site. This is what user’s will see on Google underneath your website name. Keywords can be any combination of single words or multiple words that describe your website so if people look up these words, yours has a better chance of popping up. Be sure to include as many spellings and variations to increase your chances as well (see above for example).
+				</p>
+				
+				<p>
+					You can also submit a Robots.txt file to control which file crawlers that can access your site. <a href="https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt" target="_blank">This link</a> from Google explains in depth how to create one and what their purpose is so if you have the chance, give it a read!
+				</p>
+				
+				<p>
+					Finally, a very efficient method of optimizing your website is simply by sharing it on the web. Sharing it on <a href="https://x.com/" target="_blank">Twitter</a>, <a href="https://www.reddit.com/" target="_blank">Reddit</a>, <a href="https://www.instagram.com/" target="_blank">Instagram</a>, and any other platform, as well as sharing it with your friends and getting them to click on it is always a great way to grow your page and helps bring it to the top.
+				</p>
+				
+				<p>
+					Although there might be a lot of blogs out there and I may not be at the top (or anywhere near it), I do believe I have some credibility with one of my projects reaching the top. I created a website to help create custom assets for a video game (<a href="https://dbdperkmaker.ca/" target="_blank">dbdperkmaker.ca</a>) and I have managed to push it to the top of Google. If you were to search up its name (abbreviated or full) with different combinations of the words perk maker, perk creator, custom concept creator, etc, it should be the first one!
+				</p>
+				
+				<div class="container-image">
+					<img src="assets/img/seo-post-5.png">
+				</div>
+				<br>
+				
+				<p>
+					Praising aside, it is very important for your website to be indexed and optimized in many ways so that you can gain as much attention and visits from users. I have listed many ways to do this, but there are always more out there to further improve your site. I hope this has helped and I hope you start to see more green checkmarks and lines in your Search Console. I also hope that one day, you can see your website at the top of the Google Search results and be proud of what you accomplished.
+				</p>
+					
 			</div>
 			<!-- End Post Content -->
 
 			<!-- Begin Tags -->
 			<div class="after-post-tags">
 				<ul class="tags">
-					<li><a>TODO</a></li>
+					<li><a>Coding</a></li>
+					<li><a>Index</a></li>
+					<li><a>Website</a></li>
+					<li><a>Google Search Console</a></li>
+					<li><a>Google</a></li>
+					<li><a>SEO</a></li>
+					<li><a>Search Engine Optimization</a></li>
 				</ul>
 			</div>
 			<!-- End Tags -->
