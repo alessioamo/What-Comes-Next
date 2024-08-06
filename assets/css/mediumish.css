@@ -539,4 +539,27 @@ code {
 .codeString {
 	color: orange;
 }
+.codeBackground {
+	background-color: #f1f1f1;
+}
+
+.copyBtn {
+	background-color: #007BFF;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.copyBtn:hover {
+	background-color: #0056b3;
+}
+
+.copyBtnContainer {
+	text-align: right;
+}
+  
 /* Code CSS */
