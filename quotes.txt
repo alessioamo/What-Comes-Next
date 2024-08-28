@@ -11,3 +11,5 @@ If your program has errors when running but it still works, you have a working p
 DONE - Code doesn't need to be pretty to function, but you will thank your past self if it is.
 Sometimes doing what is easiest works the best.
 If the developer of Undertale can sell over 3.5 million copies by using one massive switch statement spanning thousands of lines for dialogue, you can do it also.
+Code is like humor. When you have to explain it, it’s bad.
+DONE - The only way to learn a new programming language is by writing programs in it.
