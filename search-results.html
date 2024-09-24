@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Search Results">
+<title>Search Results</title>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/mediumish.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Begin Nav
+================================================== -->
+<nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+        <!-- Begin Logo -->
+        <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo.png" alt="logo">
+        </a>
+        <!-- End Logo -->
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <!-- Begin Menu -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+                <a class="nav-link" href="post1.html">Post</a>
+                </li> -->
+                <li class="nav-item">
+                <a class="nav-link" href="author.html">Author</a>
+                </li>
+            </ul>
+            <!-- End Menu -->
+            <!-- Begin Search -->
+            <form class="form-inline my-2 my-lg-0">
+                <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Search">
+                <span class="search-icon" onclick="search()"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+            </form>
+            <!-- End Search -->
+        </div>
+    </div>
+    </nav>
+    <!-- End Nav
+    ================================================== -->
+
+<div class="container" style="margin-top: 100px;">
+    <h1 class="sitetitle">Search Results</h1>
+    <p class="lead">Results for "<span id="search-query"></span>":</p>
+
+    <section class="search-results">
+        <div id="results-container" class="card-columns listrecent"></div>
+    </section>
+</div>
+
+<script>
+    // Parse the query from the URL
+    function getQueryParameter(param) {
+        var urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    // List of posts (this can come from an API or manually added)
+    const posts = [
+    {
+        title: "My Current and Future Projects (2024)",
+        description: "A display of my current projects and my plans for what projects are next.",
+        date: "28 August 2024",
+        link: "post4.html",
+        image: "assets/img/projects1.png",
+        tags: ["Devlog", "Coding", "Projects", "Game Development", "Web Development", "GitHub"],
+        keywords: ["blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation, "+ 
+								"what, comes, come, next, what comes next, what come next, " +
+								"devlog, dev, log, current, future, project, projects, current project, future project, current projects, future projects, 2024, upcoming, " +
+								"in, development, in development, dbd perk maker, dbdperkmaker, dead by daylight, dead by daylight perk maker, portfolio, online, online portfolio, " +
+								"https://alessioamo.github.io/Portfolio, github, chroma, unity, 2d, puzzle, platformer, 2d puzzle platformer, scramblecoin, disney, dreamlight, valley, " + 
+								"disney dreamlight, dreamlight valley, disney dreamlight valley, apocalypse, survival, apocalypse survival, 60 seconds, stardew, valley, idle, " +
+								"stardew valley, stardew valley idle, incremental, game, cookie clicker, game developement, game dev, top down, shooter, ai, simulator, conversion, " +
+								"calculator, tool, smite damage calculator, smite, smite 2"]
+    },
+    {
+        title: "Search Engine Optimization (SEO) and Adding Your Website to Google",
+        description: "A guide on how to index your website and get it to the top of Google Search Results.",
+        date: "31 July 2024",
+        link: "post3.html",
+        image: "assets/img/seo1.jpg",
+        tags: ["Coding", "Web Development", "Index", "Website", "Google Search Console", "Google", "SEO", "Search Engine Optimization"],
+        keywords: ["blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation, " +
+								"what, comes, come, next, what comes next, what come next, " +
+								"seo, search, engine, optimize, optimization, optimise, optimisation, search engine, search engine optimization, search engine optimisation, " +
+								"google, console, google search, google console, google search console, search console, index, indexing, website index, web index, webpage index, " +
+								"crawl, crawling, url, sitemap, sitemap.xml, sitemap generator, meta tag, robots.txt, description, keywords, add website to google, search results, " +
+								"google search results"]
+    },
+    {
+        title: "How to Add Comments to Your Static Website",
+        description: "A guide on how to add comments to a static website.",
+        date: "3 July 2024",
+        link: "post2.html",
+        image: "assets/img/comments1.png",
+        tags: ["Coding", "Web Development", "Comments", "Static Website", "Hosting", "Github Pages"],
+        keywords: ["blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation, " +
+								"what, comes, come, next, what comes next, what come next, " +
+								"comments, static, site, website, github, pages, giscus, discus, staticman, google, search, console, hosting"]
+    },
+    {
+        title: "The Beginning",
+        description: "A reflection on the past and the start of something new.",
+        date: "5 June 2024",
+        link: "post1.html",
+        image: "assets/img/graduation2.jpg",
+        tags: ["Personal", "Graduation"],
+        keywords: ["blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation, " +
+								"media, personal, what, comes, come, next, what comes next, what come next"]
+    }
+    ];
+
+    // Function to render search results
+    function renderResults(query) {
+        const resultsContainer = document.getElementById('results-container');
+        const searchQuerySpan = document.getElementById('search-query');
+        searchQuerySpan.textContent = query;
+
+        // Filter posts by title, description, tags, or keywords matching the query
+        const filteredPosts = posts.filter(post => 
+            post.title.toLowerCase().includes(query.toLowerCase()) || // Match title
+            post.description.toLowerCase().includes(query.toLowerCase()) || // Match description
+            post.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase())) || // Match tags
+            post.keywords.some(keyword => keyword.toLowerCase().includes(query.toLowerCase())) // Match keywords
+        );
+
+        // Display results or no results message
+        if (filteredPosts.length > 0) {
+            filteredPosts.forEach(post => {
+                const postHtml = `
+                <div class="card">
+                    <a href="${post.link}">
+                        <img class="img-fluid" src="${post.image}" alt="">
+                    </a>
+                    <div class="card-block">
+                        <h2 class="card-title"><a href="${post.link}">${post.title}</a></h2>
+                        <h4 class="card-text">${post.description}</h4>
+                        <div class="metafooter">
+                            <div class="wrapfooter">
+                                <span class="author-meta">
+                                    <span class="post-date">${post.date}</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+                resultsContainer.innerHTML += postHtml;
+            });
+        } else {
+            resultsContainer.innerHTML = '<p>No results found for your search.</p>';
+        }
+    }
+
+    // Initialize search results page
+    document.addEventListener("DOMContentLoaded", function() {
+        const query = getQueryParameter('q');
+        if (query) {
+            renderResults(query);
+        } else {
+            document.getElementById('results-container').innerHTML = '<p>Please enter a search query.</p>';
+        }
+    });
+</script>
+
+<script src="assets/js/search.js"></script>
+
+</body>
+</html>
