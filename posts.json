@@ -1,0 +1,58 @@
+[
+    {
+        "title": "My Current and Future Projects (2024)",
+        "description": "A display of my current projects and my plans for what projects are next.",
+        "date": "28 August 2024",
+        "link": "post4.html",
+        "image": "assets/img/projects1.png",
+        "tags": ["Devlog", "Coding", "Projects", "Game Development", "Web Development", "GitHub"],
+        "keywords": [
+            "blog", "computer", "science", "computer science", "code", "coding", "programming", "programmer", 
+            "developer", "developing", "devlog", "tutorial", "help", "devlog", "graduate", "graduation",
+            "what", "comes", "come", "next", "what comes next", "what come next",
+            "devlog", "dev", "log", "current", "future", "project", "projects", "current project", 
+            "future project", "current projects", "future projects", "2024", "upcoming", 
+            "in development", "dbd perk maker", "dbdperkmaker", "dead by daylight", "dead by daylight perk maker", 
+            "portfolio", "online portfolio", "github", "chroma", "unity", "2d", "puzzle", 
+            "platformer", "2d puzzle platformer", "scramblecoin", "disney", "dreamlight", "valley", 
+            "disney dreamlight valley", "apocalypse survival", "60 seconds", "stardew valley", "idle", 
+            "incremental", "game", "cookie clicker", "game development", "game dev", "top down", 
+            "shooter", "ai", "simulator", "conversion", "calculator", "tool", "smite damage calculator", "smite"
+        ]
+    },
+    {
+        "title": "Search Engine Optimization (SEO) and Adding Your Website to Google",
+        "description": "A guide on how to index your website and get it to the top of Google Search Results.",
+        "date": "31 July 2024",
+        "link": "post3.html",
+        "image": "assets/img/seo1.jpg",
+        "tags": ["Coding", "Web Development", "Index", "Website", "Google Search Console", "Google", "SEO"],
+        "keywords": [
+            "blog", "computer", "science", "computer science", "code", "coding", "programming", "programmer", 
+            "developer", "developing", "devlog", "tutorial", "help", "graduate", "graduation", 
+            "seo", "search engine optimization", "google search console", "indexing", "sitemap", 
+            "meta tag", "robots.txt", "search results"
+        ]
+    },
+    {
+        "title": "How to Add Comments to Your Static Website",
+        "description": "A guide on how to add comments to a static website.",
+        "date": "3 July 2024",
+        "link": "post2.html",
+        "image": "assets/img/comments1.png",
+        "tags": ["Coding", "Web Development", "Comments", "Static Website", "Hosting", "Github Pages"],
+        "keywords": [
+            "blog", "comments", "static site", "website", "github", "pages", "giscus", "discus", 
+            "staticman", "hosting"
+        ]
+    },
+    {
+        "title": "The Beginning",
+        "description": "A reflection on the past and the start of something new.",
+        "date": "5 June 2024",
+        "link": "post1.html",
+        "image": "assets/img/graduation2.jpg",
+        "tags": ["Personal", "Graduation"],
+        "keywords": ["blog", "personal", "what comes next", "graduation"]
+    }
+]
