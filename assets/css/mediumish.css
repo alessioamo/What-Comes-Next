@@ -204,6 +204,7 @@ span.post-name a,span.post-read-more a:hover {
 .mainheading h1.posttitle {
 	font-weight:700;
 	margin-bottom:1rem;
+	text-align: center;
 }
 .footer {
 	border-top:1px solid rgba(0,0,0,.05)!important;
@@ -541,6 +542,17 @@ code {
 }
 .codeBackground {
 	background-color: #f1f1f1;
+	margin: 0 auto;
+	width: 100%;
+}
+.codeOther {
+	color: black;
+}
+.codeComment {
+	color: green;
+}
+.codeYellow {
+	color: rgb(206, 206, 0);
 }
 
 .copyBtn {

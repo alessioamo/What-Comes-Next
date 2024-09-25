@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A blog about what comes next for a Computer Science graduate">
-    <meta name="keywords" content="blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation, TODO">
+    <meta name="keywords" content="blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation,
+                                    what, comes, come, next, what comes next, what come next,">
     <meta name="author" content="Alessio">
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
     <title>What Comes Next</title>
@@ -59,7 +60,7 @@
     <div class="row">
 
         <!-- Begin Fixed Left Share -->
-        <div class="col-md-2 col-xs-12">
+        <div class="col-md-1 col-xs-12">
             <div class="share">
                 <p>
                     Talk
@@ -76,7 +77,7 @@
         <!-- End Fixed Left Share -->
 
         <!-- Begin Post -->
-        <div class="col-md-8 col-md-offset-2 col-xs-12">
+        <div class="col-md-10 col-md-offset-2 col-xs-12">
             <div class="mainheading">
 
                 <!-- Begin Top Meta -->
@@ -87,23 +88,368 @@
                     <div class="col-md-10">
                         <a class="link-dark" href="author.html">Alessio</a><br>
                         <span class="author-description">Just a developer who loves to create unique things!</span><br>
-                        <span class="post-date">September 25 2024</span><span class="dot"></span><span class="post-read">5 min read</span>
+                        <span class="post-date">September 25 2024</span><span class="dot"></span><span class="post-read">8 min read</span>
                     </div>
                 </div>
                 <!-- End Top Meta -->
 
-                <h1 class="posttitle">TITLE</h1>
+                <h1 class="posttitle">Adding a Search Bar to Your Website</h1>
 
             </div>
 
             <!-- Begin Featured Image -->
-            <img class="featured-image img-fluid" src="assets/img/assets/img/TODO1.jpg" alt="">
+            <img class="featured-image img-fluid" src="assets/img/searchBar1.jpg" alt="">
             <!-- End Featured Image -->
 
             <!-- Begin Post Content -->
             <div class="article-post">
                 <p>
-                    This is where the main content of your post will go. Replace this with your text.
+                    It has been 4 months since this blog has started and the look of it has not really changed much, especially the header of the page. And ever since the start, there has been that mysterious search bar at the top right that has done absolutely nothing… Until now! You can type anything you want into the bar and press <kbd>Enter</kbd> or the magnifying glass and it will bring you to a search results page. I set it to filter based on the title, description, tags, and some keywords. In this post, I will show you how you can setup your own search bar on your websites and customize them however you want!
+                </p>
+                    
+                <p>
+                    The first thing you will need is a website (or at least the start of one). Ideally, this should be a site with multiple pages so your search feature can work across the pages. A perfect example is a blog website but any type of website can work also. Next, you will need somewhere to place your search bar. Search bars are usually placed on the top right of pages so if you have a header, you can align your search bar to the right. Here is an example header you can have on your pages.
+                    <br>
+                    
+                    <div class="codeBackground">
+                        <code>
+&lt;<span class="codeElement">!DOCTYPE</span> <span class="codeElement">html</span>&gt;<br>
+&lt;<span class="codeElement">html</span> <span class="codeAttribute">lang=</span><span class="codeString">"en"</span>&gt;<br>
+&lt;<span class="codeElement">head</span>&gt;<br>
+&emsp;&lt;<span class="codeElement">meta</span> <span class="codeAttribute">charset=</span><span class="codeString">"UTF-8"</span> /&gt;<br>
+&emsp;&lt;<span class="codeElement">meta</span> <span class="codeAttribute">name=</span><span class="codeString">"viewport"</span> <span class="codeAttribute">content=</span><span class="codeString">"width=device-width, initial-scale=1.0"</span> /&gt;<br>
+&emsp;&lt;<span class="codeElement">title</span>&gt;<span class="codeOther">Header with Tabs and Search Bar</span>&lt;/<span class="codeElement">title</span>&gt;<br>
+&emsp;&lt;<span class="codeElement">style</span>&gt;<br>
+&emsp;&emsp;<span class="codeComment">/* Basic styling for the header */</span><br>
+&emsp;&emsp;<span class="codeOther">body {</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">font-family: Arial, sans-serif;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">margin: 0;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">padding: 0;</span><br>
+&emsp;&emsp;<span class="codeOther">}</span><br>
+&emsp;&emsp;<span class="codeOther">header {</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">display: flex;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">justify-content: space-between;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">align-items: center;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">padding: 10px 20px;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">background-color: #333;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">color: #fff;</span><br>
+&emsp;&emsp;<span class="codeOther">}</span><br>
+&emsp;&emsp;<span class="codeComment">/* Styling for navigation tabs */</span><br>
+&emsp;&emsp;<span class="codeOther">.nav-tabs {</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">list-style: none;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">display: flex;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">gap: 20px;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">margin: 0;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">padding: 0;</span><br>
+&emsp;&emsp;<span class="codeOther">}</span><br>
+&emsp;&emsp;<span class="codeOther">.nav-tabs li {</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">margin: 0;</span><br>
+&emsp;&emsp;<span class="codeOther">}</span><br>
+&emsp;&emsp;<span class="codeOther">.nav-tabs a {</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">text-decoration: none;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">color: #fff;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">padding: 8px 16px;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">transition: background-color 0.3s;</span><br>
+&emsp;&emsp;<span class="codeOther">}</span><br>
+&emsp;&emsp;<span class="codeOther">.nav-tabs a:hover {</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">background-color: #555;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">border-radius: 5px;</span><br>
+&emsp;&emsp;<span class="codeOther">}</span><br>
+&emsp;&emsp;<span class="codeComment">/* Styling for the search bar */</span><br>
+&emsp;&emsp;<span class="codeOther">.search-bar {</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">display: flex;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">align-items: center;</span><br>
+&emsp;&emsp;<span class="codeOther">}</span><br>
+&emsp;&emsp;<span class="codeOther">.search-bar input[type="text"] {</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">padding: 8px;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">border: none;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">border-radius: 4px;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">outline: none;</span><br>
+&emsp;&emsp;<span class="codeOther">}</span><br>
+&emsp;&emsp;<span class="codeOther">.search-bar button {</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">padding: 8px 12px;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">border: none;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">background-color: #555;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">color: #fff;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">cursor: pointer;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">border-radius: 4px;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">margin-left: 5px;</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">transition: background-color 0.3s;</span><br>
+&emsp;&emsp;<span class="codeOther">}</span><br>
+&emsp;&emsp;<span class="codeOther">.search-bar button:hover {</span><br>
+&emsp;&emsp;&emsp;<span class="codeOther">background-color: #777;</span><br>
+&emsp;&emsp;<span class="codeOther">}</span><br>
+&emsp;&lt;/<span class="codeElement">style</span>&gt;<br>
+&lt;/<span class="codeElement">head</span>&gt;<br>
+&lt;<span class="codeElement">body</span>&gt;<br>
+&emsp;&lt;<span class="codeElement">header</span>&gt;<br>
+&emsp;&emsp;&lt;<span class="codeElement">ul</span> <span class="codeAttribute">class=</span><span class="codeString">"nav-tabs"</span>&gt;<br>
+&emsp;&emsp;&emsp;&lt;<span class="codeElement">li</span>&gt;&lt;<span class="codeElement">a</span> <span class="codeAttribute">href=</span><span class="codeString">"home.html"</span>&gt;<span class="codeOther">Home</span>&lt;/<span class="codeElement">a</span>&gt;&lt;/<span class="codeElement">li</span>&gt;<br>
+&emsp;&emsp;&emsp;&lt;<span class="codeElement">li</span>&gt;&lt;<span class="codeElement">a</span> <span class="codeAttribute">href=</span><span class="codeString">"about.html"</span>&gt;<span class="codeOther">About</span>&lt;/<span class="codeElement">a</span>&gt;&lt;/<span class="codeElement">li</span>&gt;<br>
+&emsp;&emsp;&emsp;&lt;<span class="codeElement">li</span>&gt;&lt;<span class="codeElement">a</span> <span class="codeAttribute">href=</span><span class="codeString">"contact.html"</span>&gt;<span class="codeOther">Contact</span>&lt;/<span class="codeElement">a</span>&gt;&lt;/<span class="codeElement">li</span>&gt;<br>
+&emsp;&emsp;&lt;/<span class="codeElement">ul</span>&gt;<br>
+&emsp;&emsp;&lt;<span class="codeElement">div</span> <span class="codeAttribute">class=</span><span class="codeString">"search-bar"</span>&gt;<br>
+&emsp;&emsp;&emsp;&lt;<span class="codeElement">input</span> <span class="codeAttribute">type=</span><span class="codeString">"text"</span> <span class="codeAttribute">placeholder=</span><span class="codeString">"Search..."</span> /&gt;<br>
+&emsp;&emsp;&emsp;&lt;<span class="codeElement">button</span>&gt;<span class="codeOther">Search</span>&lt;/<span class="codeElement">button</span>&gt;<br>
+&emsp;&emsp;&lt;/<span class="codeElement">div</span>&gt;<br>
+&emsp;&lt;/<span class="codeElement">header</span>&gt;<br>
+&lt;/<span class="codeElement">body</span>&gt;<br>
+&lt;/<span class="codeElement">html</span>&gt;
+                        </code>
+                        <br>
+                        <div class="copyBtnContainer">
+                            <button class="copyBtn">Copy</button>
+                        </div>
+                    </div>
+
+                    <br>
+                </p>
+                    
+                <p>
+                    Next, you will want to add an onclick() attribute to your search button. Note that it does not matter what type of element it is (button, span, div, etc.), the onclick would work for it regardless. You can name the function whatever you wish, I will use search(). Then, you must make sure you have included the script where you will handle the JavaScript logic. Here is the updated section of code:
+                    <br>
+                    
+                    <div class="codeBackground">
+                        <code>
+&emsp;<span class="codeComment">&lt;!-- Search Bar --&gt;</span><br>
+&emsp;&lt;<span class="codeElement">div</span> <span class="codeAttribute">class=</span><span class="codeString">"search-bar"</span>&gt; <br>
+&emsp;&emsp;&lt;<span class="codeElement">input</span> <span class="codeAttribute">type=</span><span class="codeString">"text"</span> <span class="codeAttribute">placeholder=</span><span class="codeString">"Search..."</span>&gt;<br>
+&emsp;&emsp;&lt;<span class="codeElement">button</span> <span class="codeAttribute">type=</span><span class="codeString">"button"</span> <span class="codeAttribute">onclick=</span><span class="codeString">"search()"</span>&gt;<span class="codeOther">Search</span>&lt;<span class="codeElement">/button</span>&gt;</span><br>
+&emsp;&lt;<span class="codeElement">/div</span>&gt;<br>
+<br>
+&emsp;&lt;<span class="codeElement">script </span><span class="codeAttribute">src=</span><span class="codeString">"search.js"</span>&gt;&lt;<span class="codeElement">/script</span><br>
+&lt;<span class="codeElement">/body</span>&gt;<br>
+&lt;<span class="codeElement">/html</span>&gt;
+                        </code>
+                        <br>
+                        <div class="copyBtnContainer">
+                            <button class="copyBtn">Copy</button>
+                        </div>
+                    </div>
+
+                    <br>
+                </p>
+                    
+                <p>
+                    Now is where you will start to add the logic to the search feature. Before doing so, there is a decision you will make. The easiest way to handle the content that gets searched through is to save it in some way. You can either save it within the html/js files, or you can save it in a JSON file. I believe the second option is better as it is easier to edit and manage. The first option is valid if you are making a website that will not be hosted at all (locally or online) as if that is the case, you cannot read through JSON files.
+                </p>
+                    
+                <p>
+                    There are also other ways you can create a search feature such as using the Fetch API with JavaScript, or AJAX libraries. In my opinion though, using a JSON file can be simpler because you can control what you want to search and it is very easy to edit and make changes. For the other methods, since you are accessing the html content directly from other pages, it can cause issues if your structure or content were to ever change. And for the JSON file, you can easily set up a script to read your html files and generate the JSON file according to that.
+                </p>
+                    
+                <blockquote>
+                    
+                </blockquote>
+                    
+                <p>
+                    Now into the functionality of the search. Before getting into the search, you can add an event listener to your search bar that checks if <kbd>Enter</kbd> is pressed to also allow users to begin the search with that. Next, in your search() function, you will want to capture the input that is written in the search bar and then redirect to the html page that will contain the search results.
+                    <br>
+                    
+                    <div class="codeBackground">
+                        <code>
+                            <span class="codeElement">function</span> <span class="codeYellow">search()</span> {<br>
+&emsp;<span class="codeAttribute">console</span>.<span class="codeYellow">log</span>(<span class="codeString">'Searching...'</span>);<br><br>
+
+&emsp;<span class="codeElement">var</span> <span class="codeAttribute">query</span> = <span class="codeAttribute">document</span>.<span class="codeYellow">getElementById</span>(<span class="codeString">'searchInput'</span>).<span class="codeAttribute">value</span>;<br>
+&emsp;if (<span class="codeAttribute">query</span>) {<br>
+&emsp;&emsp;<span class="codeComment">// Redirect to search-results.html with the query as a URL parameter</span><br>
+&emsp;&emsp;<span class="codeAttribute">window.location.href</span> = <span class="codeString">'search-results.html?q='</span> + <span class="codeYellow">encodeURIComponent</span>(<span class="codeAttribute">query</span>);<br>
+&emsp;}<br>
+&emsp;<span class="">return</span> <span class="codeElement">false</span>;<br>
+}<br><br>
+
+<span class="codeAttribute">document</span>.<span class="codeYellow">getElementById</span>(<span class="codeString">'searchInput'</span>).<span class="codeYellow">addEventListener</span>(<span class="codeString">'keypress'</span>, <span class="codeElement">function</span>(<span class="codeAttribute">event</span>) {<br>
+&emsp;<span class="codeElement">if</span> (<span class="codeAttribute">event.key</span> === <span class="codeString">'Enter'</span>) {<br>
+&emsp;&emsp;<span class="codeAttribute">event</span>.<span class="codeYellow">preventDefault()</span>;<br>
+&emsp;&emsp;<span class="codeYellow">search()</span>;<br>
+&emsp;}<br>
+});
+                        </code>
+                        <br>
+                        <div class="copyBtnContainer">
+                            <button class="copyBtn">Copy</button>
+                        </div>
+                    </div>
+
+                    <br>
+                </p>
+                    
+                <p>
+                    Now we must display the search results in a new html page. For this, we can create a simple <code>&lt;div&gt;</code> that will display what we searched, and hold the contents of the search result. To display the contents, we must add some JavaScript to the search results page. We must first get the search query value, then get the content from the JSON file, and then filter the results based on the query. Before we get to that, we have to set the layout for our JSON file. This is where you have the freedom to decide what you want to be involved in the searching functionality. For my search feature, I include the title, description, tags, and keywords. You can add more such as the content, image names, etc. This is what some of my JSON file looks like:
+                    <br>
+
+                    <div class="codeBackground">
+                        <code>
+[<br>
+&emsp;<span class="codeElement">{</span><br>
+&emsp;&emsp;<span class="codeAttribute">"title"</span>: <span class="codeString">"Search Engine Optimization (SEO) and Adding Your Website to Google"</span>,<br>
+&emsp;&emsp;<span class="codeAttribute">"description"</span>: <span class="codeString">"A guide on how to index your website and get it to the top of Google Search Results."</span>,<br>
+&emsp;&emsp;<span class="codeAttribute">"date"</span>: <span class="codeString">"31 July 2024"</span>,<br>
+&emsp;&emsp;<span class="codeAttribute">"link"</span>: <span class="codeString">"post3.html"</span>,<br>
+&emsp;&emsp;<span class="codeAttribute">"image"</span>: <span class="codeString">"assets/img/seo1.jpg"</span>,<br>
+&emsp;&emsp;<span class="codeAttribute">"tags"</span>: [<span class="codeString">"Coding"</span>, <span class="codeString">"Web Development"</span>, <span class="codeString">"Index"</span>, <span class="codeString">"Website"</span>, <span class="codeString">"Google Search Console"</span>, <span class="codeString">"Google"</span>, <span class="codeString">"SEO"</span>],<br>
+&emsp;&emsp;<span class="codeAttribute">"keywords"</span>: [<span class="codeString">"blog"</span>, <span class="codeString">"computer"</span>, <span class="codeString">"science"</span>, <span class="codeString">"computer science"</span>, <span class="codeString">"code"</span>, <span class="codeString">"coding"</span>, <span class="codeString">"programming"</span>, <span class="codeString">"programmer"</span>, <span class="codeString">"developer"</span>, <span class="codeString">"developing"</span>, <span class="codeString">"devlog"</span>, <span class="codeString">"tutorial"</span>, <span class="codeString">"help"</span>, <span class="codeString">"graduate"</span>, <span class="codeString">"graduation"</span>, <span class="codeString">"seo"</span>, <span class="codeString">"search engine optimization"</span>, <span class="codeString">"google search console"</span>, <span class="codeString">"indexing"</span>, <span class="codeString">"sitemap"</span>, <span class="codeString">"meta tag"</span>, <span class="codeString">"robots.txt"</span>, <span class="codeString">"search results"</span>]<br>
+&emsp;<span class="codeElement">},</span><br>
+&emsp;<span class="codeElement">{</span><br>
+&emsp;&emsp;<span class="codeAttribute">"title"</span>: <span class="codeString">"How to Add Comments to Your Static Website"</span>,<br>
+&emsp;&emsp;<span class="codeAttribute">"description"</span>: <span class="codeString">"A guide on how to add comments to a static website."</span>,<br>
+&emsp;&emsp;<span class="codeAttribute">"date"</span>: <span class="codeString">"3 July 2024"</span>,<br>
+&emsp;&emsp;<span class="codeAttribute">"link"</span>: <span class="codeString">"post2.html"</span>,<br>
+&emsp;&emsp;<span class="codeAttribute">"image"</span>: <span class="codeString">"assets/img/comments1.png"</span>,<br>
+&emsp;&emsp;<span class="codeAttribute">"tags"</span>: [<span class="codeString">"Coding"</span>, <span class="codeString">"Web Development"</span>, <span class="codeString">"Comments"</span>, <span class="codeString">"Static Website"</span>, <span class="codeString">"Hosting"</span>, <span class="codeString">"Github Pages"</span>],<br>
+&emsp;&emsp;<span class="codeAttribute">"keywords"</span>: [<span class="codeString">"blog"</span>, <span class="codeString">"comments"</span>, <span class="codeString">"static site"</span>, <span class="codeString">"website"</span>, <span class="codeString">"github"</span>, <span class="codeString">"pages"</span>, <span class="codeString">"giscus"</span>, <span class="codeString">"discus"</span>, <span class="codeString">"staticman"</span>, <span class="codeString">"hosting"</span>]<br>
+&emsp;<span class="codeElement">}</span><br>
+]
+                        </code>
+                        <br>
+                        <div class="copyBtnContainer">
+                            <button class="copyBtn">Copy</button>
+                        </div>
+                    </div>
+
+                    <br>
+                </p>
+                    
+                <p>
+                    Now for the search functionality, we have our three functions: Get the query, fetch the JSON file, and render the results. For getting the query, since we passed the parameters in our link when we redirected, we can easily access those using the following:
+                    <br>
+
+                    <div class="codeBackground">
+                        <code>
+<span class="codeComment">// Function to parse query from URL</span><br>
+<span class="codeElement">function</span> getQueryParameter(<span class="codeAttribute">param</span>) {<br>
+&emsp;<span class="codeElement">var</span> <span class="codeAttribute">urlParams</span> = <span class="codeElement">new</span> <span class="codeYellow">URLSearchParams</span>(<span class="codeAttribute">window.location.search</span>);<br>
+&emsp;<span class="">return</span> <span class="codeAttribute">urlParams</span>.<span class="codeYellow">get</span>(<span class="codeAttribute">param</span>);<br>
+}
+                        </code>
+                        <br>
+                        <div class="copyBtnContainer">
+                            <button class="copyBtn">Copy</button>
+                        </div>
+                    </div>
+
+                    <br>
+                </p>
+                    
+                <p>
+                    For fetching our JSON data, we can use a simple try catch function to attempt to access it and return an error if it is not found or if it cannot access them:
+                    <br>
+
+                    <div class="codeBackground">
+                        <code>
+<span class="codeComment">// Function to fetch posts data from JSON file</span><br>
+<span class="codeElement">async</span> <span class="codeElement">function</span> fetchPosts() {<br>
+&emsp;<span class="">try</span> {<br>
+&emsp;&emsp;<span class="codeElement">const</span> <span class="codeAttribute">response</span> = <span class="">await</span> <span class="codeYellow">fetch</span>(<span class="codeString">'posts.json'</span>);<br>
+&emsp;&emsp;<span class="">if</span> (!<span class="codeAttribute">response</span>.<span class="codeAttribute">ok</span>) {<br>
+&emsp;&emsp;&emsp;<span class="">throw</span> <span class="codeElement">new</span> <span class="codeOther">Error</span>(<span class="codeString">'Failed to load posts'</span>);<br>
+&emsp;&emsp;}<br>
+&emsp;&emsp;<span class="">return</span> <span class="">await</span> <span class="codeAttribute">response</span>.<span class="codeYellow">json</span>();<br>
+&emsp;} <span class="">catch</span> (<span class="codeAttribute">error</span>) {<br>
+&emsp;&emsp;<span class="codeYellow">console</span>.<span class="codeYellow">error</span>(<span class="codeString">'Error fetching posts:'</span>, <span class="codeAttribute">error</span>);<br>
+&emsp;&emsp;<span class="">return</span> [];<br>
+&emsp;}<br>
+}
+                        </code>
+                        <br>
+                        <div class="copyBtnContainer">
+                            <button class="copyBtn">Copy</button>
+                        </div>
+                    </div>
+
+                    <br>
+                </p>
+                    
+                <p>
+                    For rendering our results, here is where the code will differ. Here is mine for reference:
+                    <br>
+
+                    <div class="codeBackground">
+                        <code>
+<span class="codeComment">// Function to render search results</span><br>
+<span class="codeElement">function</span> <span class="codeYellow">renderResults</span>(<span class="codeAttribute">query</span>, <span class="codeAttribute">posts</span>) {<br>
+&emsp;<span class="codeElement">const</span> <span class="codeAttribute">resultsContainer</span> = <span class="codeAttribute">document</span>.<span class="codeYellow">getElementById</span>(<span class="codeString">'results-container'</span>);<br>
+&emsp;<span class="codeElement">const</span> <span class="codeAttribute">searchQuerySpan</span> = <span class="codeAttribute">document</span>.<span class="codeYellow">getElementById</span>(<span class="codeString">'search-query'</span>);<br>
+&emsp;<span class="codeAttribute">searchQuerySpan</span>.<span class="codeAttribute">textContent</span> = <span class="codeAttribute">query</span>;<br><br>
+
+&emsp;<span class="codeComment">// Filter posts by title, description, tags, or keywords matching the query</span><br>
+&emsp;<span class="codeElement">const</span> <span class="codeAttribute">filteredPosts</span> = <span class="codeAttribute">posts</span>.<span class="codeYellow">filter</span>(<span class="codeElement">post</span> => <br>
+&emsp;&emsp;<span class="codeAttribute">post.title</span>.<span class="codeYellow">toLowerCase</span>().<span class="codeYellow">includes</span>(<span class="codeAttribute">query</span>.<span class="codeYellow">toLowerCase</span>()) ||<br>
+&emsp;&emsp;<span class="codeAttribute">post.description</span>.<span class="codeYellow">toLowerCase</span>().<span class="codeYellow">includes</span>(<span class="codeAttribute">query</span>.<span class="codeYellow">toLowerCase</span>()) ||<br>
+&emsp;&emsp;<span class="codeAttribute">post.tags</span>.<span class="codeYellow">some</span>(<span class="codeElement">tag</span> => <span class="codeAttribute">tag</span>.<span class="codeYellow">toLowerCase</span>().<span class="codeYellow">includes</span>(<span class="codeAttribute">query</span>.<span class="codeYellow">toLowerCase</span>())) ||<br>
+&emsp;&emsp;<span class="codeAttribute">post.keywords</span>.<span class="codeYellow">some</span>(<span class="codeElement">keyword</span> => <span class="codeAttribute">keyword</span>.<span class="codeYellow">toLowerCase</span>().<span class="codeYellow">includes</span>(<span class="codeAttribute">query</span>.<span class="codeYellow">toLowerCase</span>()));<br><br>
+
+&emsp;<span class="codeComment">// Display results or no results message</span><br>
+&emsp;<span class="">if</span> (<span class="codeAttribute">filteredPosts</span>.<span class="codeAttribute">length</span> > 0) {<br>
+&emsp;&emsp;<span class="codeAttribute">filteredPosts</span>.<span class="codeYellow">forEach</span>(<span class="codeElement">post</span> => {<br>
+&emsp;&emsp;&emsp;<span class="codeElement">const</span> <span class="codeAttribute">postHtml</span> = `<br>
+&emsp;&emsp;&emsp;&emsp;<span class="codeString">`&lt;div class="card"&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&lt;a href="<span class="codeElement">$</span><span class="codeAttribute">{post.link}</span>"&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&lt;img class="img-fluid" src="<span class="codeElement">$</span><span class="codeAttribute">{post.image}</span>" alt=""&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&lt;/a&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&lt;<span class="">div</span> class="card-block"&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&lt;<span class="">h2</span> class="card-title"&gt;&lt;a href="<span class="codeElement">$</span><span class="codeAttribute">{post.link}</span>"&gt;<span class="codeElement">$</span><span class="codeAttribute">{post.title}</span>&lt;/<span class="">a</span>&gt;&lt;/<span class="">h2</span>&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&lt;<span class="">h4</span> class="card-text"&gt;<span class="codeElement">$</span><span class="codeAttribute">{post.description}</span>&lt;/<span class="">h4</span>&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&lt;<span class="">div</span> class="metafooter"&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;<span class="">div</span> class="wrapfooter"&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;<span class="">span</span> class="author-meta"&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;<span class="">span</span> class="post-date"&gt;<span class="codeElement">$</span><span class="codeAttribute">{post.date}</span>&lt;/<span class="">span</span>&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;/<span class="">span</span>&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;/<span class="">div</span>&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&lt;/<span class="">div</span>&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&lt;/<span class="">div</span>&gt;`;</span><br>
+&emsp;&emsp;&emsp;&emsp;<span class="codeAttribute">resultsContainer.innerHTML</span> += <span class="codeAttribute">postHtml</span>;<br>
+&emsp;&emsp;&emsp;});<br>
+&emsp;} <span class="">else</span> {<br>
+&emsp;&emsp;<span class="codeAttribute">resultsContainer.innerHTML</span> = <span class="codeString">'&lt;p&gt;No results found for your search.&lt;/p&gt;'</span>;<br>
+&emsp;}<br>
+}
+                        </code>
+                        <br>
+                        <div class="copyBtnContainer">
+                            <button class="copyBtn">Copy</button>
+                        </div>
+                    </div>
+
+                    <br>
+                </p>
+
+                <p>
+                    The start simply gets the search query and prepares the div to display the results, Then, depending on how you structure your JSON format and what you choose to filter, the const filteredPosts will be different, but by looking at my format, you can easily figure out how it is done. Just edit the second variable of the following line to be the same name as you gave in the name section of your JSON file. In this case, you would change <code class="codeComment">title</code>: 
+                    <div class="codeBackground">
+                        <code>
+                            <span class="codeAttribute">post.<span class="codeComment">title</span></span>.<span class="codeYellow">toLowerCase</span>().<span class="codeYellow">includes</span>(<span class="codeAttribute">query</span>.<span class="codeYellow">toLowerCase</span>())
+                        </code>
+                    </div>
+                    <br>Next, is where things will also be different. This all depends on how the layout and CSS is of your webpage. For mine, they are styled by using cards within Bootstrap that can be quickly setup by searching online or using tools like ChatGPT to generate them for you. Within the html, you can embed the content of your results however you would like. Finally, at the end you can add an eventlistener to run all the necessary functions when the page is loaded to get your search results right away.
+                
+                    <br><br>
+
+                    <div class="codeBackground">
+                        <code>
+<span class="codeComment">// Initialize search results page</span><br>
+<span class="codeAttribute">document</span>.<span class="codeYellow">addEventListener</span>(<span class="codeString">"DOMContentLoaded"</span>, <span class="codeElement">async</span> <span class="codeElement">function</span>() {<br>
+&emsp;<span class="codeElement">const</span> <span class="codeAttribute">query</span> = <span class="codeYellow">getQueryParameter</span>(<span class="codeString">'q'</span>);<br>
+&emsp;<span class="">if</span> (<span class="codeAttribute">query</span>) {<br>
+&emsp;&emsp;<span class="codeElement">const</span> <span class="codeAttribute">posts</span> = <span class="">await</span> <span class="codeYellow">fetchPosts</span>();<br>
+&emsp;&emsp;<span class="codeYellow">renderResults</span>(<span class="codeAttribute">query</span>, <span class="codeAttribute">posts</span>);<br>
+&emsp;} <span class="">else</span> {<br>
+&emsp;&emsp;<span class="codeAttribute">document</span>.<span class="codeYellow">getElementById</span>(<span class="codeString">'results-container'</span>).<span class="codeAttribute">innerHTML</span> = <span class="codeString">'&lt;p&gt;Please enter a search query.&lt;/p&gt;'</span>;<br>
+&emsp;}<br>
+});
+                        </code>
+                        <br>
+                        <div class="copyBtnContainer">
+                            <button class="copyBtn">Copy</button>
+                        </div>
+                    </div>
+
+                    <br>
+                </p>
+                Well there you have it! A short guide on how to add a search feature into your own website. If you would like to see all the code together, you can click <a href="index.html">here (TODO)</a> to visit a repository with the relevant files. Thanks for making it this far and I hope the search feature helps! I know it will help me when I look back on this blog in many years to try and find a specific post. In the meantime, I will be searching for new topics to discuss for my next post!
+                <p>
+
                 </p>
             </div>
             <!-- End Post Content -->
@@ -112,8 +458,9 @@
             <div class="after-post-tags">
                 <ul class="tags">
                     <li><a>Coding</a></li>
-                    <li><a>Java</a></li>
-                    <li><a>HTML</a></li>
+                    <li><a>Web Development</a></li>
+                    <li><a>Website</a></li>
+                    <li><a>Search</a></li>
                 </ul>
             </div>
             <!-- End Tags -->
@@ -158,7 +505,78 @@
     <div class="container">
         <div class="row listrecent listrelated">
             <!-- begin post -->
-            <!-- end post -->
+			<div class="col-md-4">
+				<div class="card">
+					<a href="post3.html">
+					<img class="img-fluid img-thumb" src="assets/img/seo1.jpg" alt="">
+					</a>
+					<div class="card-block">
+						<h2 class="card-title"><a href="post3.html">Search Engine Optimization (SEO) and Adding Your Website to Google</a></h2>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="meta-footer-thumb">
+									<a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+								</span>
+								<span class="author-meta">
+									<span class="post-name"><a href="author.html">Alessio</a></span><br/>
+								<span class="post-date">31 July 2024</span><span class="dot"></span><span class="post-read">7 min read</span>
+								</span>
+								<!-- <span class="post-read-more"><a href="post1.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end post -->
+            <!-- begin post -->
+			<div class="col-md-4">
+				<div class="card">
+					<a href="post4.html">
+					<img class="img-fluid img-thumb" src="assets/img/projects1.png" alt="">
+					</a>
+					<div class="card-block">
+						<h2 class="card-title"><a href="post4.html">My Current and Future Projects (2024)</a></h2>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="meta-footer-thumb">
+									<a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+								</span>
+								<span class="author-meta">
+									<span class="post-name"><a href="author.html">Alessio</a></span><br/>
+								<span class="post-date">28 August 2024</span><span class="dot"></span><span class="post-read">8 min read</span>
+								</span>
+								<!-- <span class="post-read-more"><a href="post1.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end post -->
+
+			<!-- begin post -->
+			<div class="col-md-4">
+				<div class="card">
+					<a href="post2.html">
+					<img class="img-fluid img-thumb" src="assets/img/comments1.png" alt="">
+					</a>
+					<div class="card-block">
+						<h2 class="card-title"><a href="post2.html">How to Add Comments to Your Static Website</a></h2>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="meta-footer-thumb">
+									<a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+								</span>
+								<span class="author-meta">
+									<span class="post-name"><a href="author.html">Alessio</a></span><br/>
+								<span class="post-date">3 July 2024</span><span class="dot"></span><span class="post-read">6 min read</span>
+								</span>
+								<!-- <span class="post-read-more"><a href="post1.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end post -->
         </div>
     </div>
 </div>
