@@ -13,7 +13,10 @@ $(function(){
 document.querySelectorAll('.copyBtn').forEach(button => {
 	button.addEventListener('click', () => {
 		const codeBlock = button.closest('.codeBackground').querySelector('code');
-		const textToCopy = codeBlock.textContent || codeBlock.innerText;
+		const textToCopy1 = codeBlock.textContent || codeBlock.innerText;
+
+		//textToCopy = textToCopy.replace(/&emsp;/g, '');
+		textToCopy = textToCopy1.replace(/\u2003/g, '\t');
 
 		navigator.clipboard.writeText(textToCopy).then(() => {
 			button.textContent = 'Copied!';
