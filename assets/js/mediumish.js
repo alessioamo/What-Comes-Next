@@ -28,3 +28,27 @@ document.querySelectorAll('.copyBtn').forEach(button => {
 		});
 	});
 });
+
+const copyButtons = document.querySelectorAll('.copy-btn');
+
+    copyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Get the previous <pre><code> element (the one to be copied)
+            const codeBlock = button.previousElementSibling;
+            
+            // Create a range and selection to copy the text content
+            const range = document.createRange();
+            range.selectNodeContents(codeBlock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();  // Clear previous selections
+            selection.addRange(range);  // Add the new selection
+            
+            try {
+                // Try to execute the copy command
+                document.execCommand('copy');
+                alert('Code copied to clipboard!');
+            } catch (err) {
+                console.error('Error copying text: ', err);
+            }
+        });
+    });

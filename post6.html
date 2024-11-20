@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A blog about what comes next for a Computer Science graduate">
+    <meta name="keywords" content="blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation, what, comes, come, next, what comes next, what come next, discord, bot, discord bot, js, node js, node, node.js, host, hosting, free, free hosting, free host, create discord bot, create bot, api, commandvscode, cloudfare, google, search, console, google search consolebootstrap, html, js, css, card, cards, chatgpt, gpt">
+    <meta name="author" content="Alessio">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>What Comes Next</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/mediumish.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Begin Nav
+================================================== -->
+<nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+        <!-- Begin Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo.png" alt="logo">
+        </a>
+        <!-- End Logo -->
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <!-- Begin Menu -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="author.html">Author</a>
+                </li>
+            </ul>
+            <!-- End Menu -->
+            <!-- Begin Search -->
+            <form class="form-inline my-2 my-lg-0">
+                <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Search">
+                <span class="search-icon" onclick="search()"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+            </form>
+            <!-- End Search -->
+        </div>
+    </div>
+</nav>
+<!-- End Nav
+================================================== -->
+
+<!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Begin Fixed Left Share -->
+        <div class="col-md-1 col-xs-12">
+            <div class="share">
+                <p>
+                    Talk
+                </p>
+                <ul>
+                    <li>
+                        <a href="#comments">
+                            <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29"><path d="M21.27 20.058c1.89-1.826 2.754-4.17 2.754-6.674C24.024 8.21 19.67 4 14.1 4 8.53 4 4 8.21 4 13.384c0 5.175 4.53 9.385 10.1 9.385 1.007 0 2-.14 2.95-.41.285.25.592.49.918.7 1.306.87 2.716 1.31 4.19 1.31.276-.01.494-.14.6-.36a.625.625 0 0 0-.052-.65c-.61-.84-1.042-1.71-1.282-2.58a5.417 5.417 0 0 1-.154-.75zm-3.85 1.324l-.083-.28-.388.12a9.72 9.72 0 0 1-2.85.424c-4.96 0-8.99-3.706-8.99-8.262 0-4.556 4.03-8.263 8.99-8.263 4.95 0 8.77 3.71 8.77 8.27 0 2.25-.75 4.35-2.5 5.92l-.24.21v.32c0 .07 0 .19.02.37.03.29.1.6.19.92.19.7.49 1.4.89 2.08-.93-.14-1.83-.49-2.67-1.06-.34-.22-.88-.48-1.16-.74z"></path></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Fixed Left Share -->
+
+        <!-- Begin Post -->
+        <div class="col-md-10 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                <!-- Begin Top Meta -->
+                <div class="row post-top-meta">
+                    <div class="col-md-2">
+                        <a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="author.html">Alessio</a><br>
+                        <span class="author-description">Just a developer who loves to create unique things!</span><br>
+                        <span class="post-date">November 20 2024</span><span class="dot"></span><span class="post-read">8 min read</span>
+                    </div>
+                </div>
+                <!-- End Top Meta -->
+
+                <h1 class="posttitle">How to Create a Discord Bot</h1>
+
+            </div>
+
+            <!-- Begin Featured Image -->
+            <img class="featured-image img-fluid" src="assets/img/discordBot1.png" alt="">
+            <!-- End Featured Image -->
+
+            <!-- Begin Post Content -->
+            <div class="article-post">
+                <p>
+                    The year is 2016, you are scrolling through Facebook when you hear the signature Skype ringtone as a popup appears on your screen. You answer and your friend starts talking about a new app to use where you can talk to each other instead of using Skype. "What's it called?" you ask. He sends you a link and says "<i>Discord</i>".
+                </p>
+                    
+                <p>
+                    Discord is the most popular gaming communication application and one of the most popular communication applications in general. From its ease of use, to its customization, to its communities and more. One thing that puts it apart from the rest of the applications is the use of bots. Discord has an API and a lot of documentation and support for users to create and access bots for their servers. These bots can range from simple bots like replying to messages with gifs, to very complicated bots that manage entire servers. In this post, I will show you how to create your own bot with custom commands and how to host it.
+                </p>
+                    
+                <p>
+                    First, you need to head to the <a href="https://discord.com/developers/applications" target="_blank">Discord Development Page</a> and login to your Discord account. Then, click on <code><b>New Application</b></code> at the top right of the page. Give a name to your application and confirm it. This will take you to a new page with a sidebar and many options. Select <code><b>Bot</b></code> and if there is not already one created (if not there will be nothing under Build-A-Bot), click on the button at the top right that says <code><b>Add Bot</b></code>.
+                </p>
+                    
+                <div class="container-image">
+                    <img src="assets/img/discord-post-1.png">
+                </div>
+                    
+                <p>
+                    Here you can customize your bot by giving it a username, profile picture, and banner. Before proceeding, you should see a token under username (a long line of random characters). Copy this and store it somewhere safe because it will disappear the next time you visit this page. Also, make sure to never share this with anyone because then they could access your bot and alter it.
+                </p>
+                    
+                <p>
+                    Next, we must invite your bot to your server(s). Generally, I create a test server for bot testing and invite my bot there first before inviting it to other servers. To generate an invite link, go to <code><b>OAuth2</b></code> in the sidebar right above Bot. If you scroll down you will see OAuth2 URL Generator. In this section, select <code><b>Bot</b></code> and a new section with bot permissions will show up. This is where you can select what permissions you want your bot to have like sending messages, reacting to messages, etc. It is recommended to give this bot admin privileges to make it easier to work with but that is always up to you.
+                </p>
+                    
+                <div class="container-image">
+                    <img src="assets/img/discord-post-2.png">
+                </div>
+                    
+                <div class="container-image">
+                    <img src="assets/img/discord-post-3.png">
+                </div>
+                    
+                <p>
+                    Make sure Integration Type is on Guild Install and then copy the link. Paste it into your browser and select the server(s) you would like to add your bot to. Now, we will get into the coding of the bot. Before starting, you will need VSCode and Node.js installed on your computer. Once complete, open VSCode and create a new folder for you to work in. Open your Terminal by selecting Terminal -> New Terminal or using the shortcut <kbd>Ctrl</kbd> + <kbd>`</kbd>.
+                </p>
+
+                <div class="container-image">
+                    <img src="assets/img/discord-post-4.png">
+                </div>
+                    
+                </p>
+                    
+                <p>
+                    You can check if Node.js installed properly by entering
+                    <br><code>node -v</code> and
+                    <br><code>npm -v</code>. Next, run<br><code>npm init -y</code> and once complete, run
+                    <br><code>npm i discord.js</code>. These will download all the proper libraries that you will need. Next, create a file index.js and a file config.json. In config.json, you will want to put:
+                </p>
+                    
+                <pre><code class="language-javascript">
+{
+    "token": "PASTE TOKEN HERE"
+}
+                </code></pre>
+                <button class="copy-btn">Copy</button>
+                <br><br>
+                    
+                <p>
+                    And replace PASTE TOKEN HERE with that token you copied earlier. In index.js, you can write:
+                </p>
+                    
+                <pre><code class="language-javascript">
+const { token } = require('./config.json');
+const {
+    Client,
+    GatewayIntentBits,
+    ButtonBuilder,
+    ButtonStyle,
+    ModalBuilder,
+    TextInputBuilder,
+    TextInputStyle
+} = require('discord.js');
+
+const client = new Client ({
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.DirectMessages,
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.GuildMessageReactions
+    ]
+});
+
+client.login(token);
+
+client.on("messageCreate", async (message) => {
+
+    if (!message?.author.bot) {
+        message.reply("Hello");
+    }
+
+});
+                </code></pre>
+                <button class="copy-btn">Copy</button>
+                <br><br>
+                    
+                <p>
+                    This will make it so your bot will reply to any message sent in the server that is not from a bot. Not a very useful bot, but this is useful to test to see if everything is running smoothly. In order to test it, you can enter node . in your terminal and your bot should come online in Discord. Send a message to make sure your bot replies to you and that everything is flowing smoothly.
+                </p>
+                    
+                <p>
+                    If it works, then great you are all done! Of course, there are way more things that can be done with the bot and I will show you some of the common ones. If you would like to skip ahead to the hosting, <a href="#hosting">click here!</a>
+                </p>
+                    
+                <blockquote>
+                    I have a weird bug in my program where when I solve one bug, three more appear somewhere else.
+                </blockquote>
+                    
+                <p>
+                    We went through replying to a message, but you can also have your bot send a message without replying using <code>message.channel.send</code>. You can even send a direct message to a user using <code>message.author.send</code>. If you want to check the contents of the message before doing anything, you can access the contents of the message using <code>message.content</code>.
+                </p>
+                    
+                <pre><code class="language-javascript">
+if (message.content == 'hello') {
+    message.reply('Hello, how are you?');
+}
+                </code></pre>
+                <button class="copy-btn">Copy</button>
+                <br><br>
+                    
+                <p>
+                    It is important to keep your code neat so using a command handler can come in handy if you have multiple commands. Building on our previous index.js, we can change up our the client reacts to message creations. Create a new file called commands.js and a new folder called commands. In commands.js, place this.
+                </p>
+                    
+                <pre><code class="language-javascript">
+const burrito = require('./commands/burrito.js');
+const help = require('./commands/help.js');
+
+const commands = {
+    burrito,
+    help
+};
+
+const commandCharacter = "!";
+
+module.exports = async function (message){
+    
+    try {
+        if (message.content.charAt(1) ===" ") {
+            return;
+        }
+
+        let tokens = message.content.split(" ");
+        let command = tokens.shift();
+
+        if (message.content.toLowerCase().includes("burrito")) {
+            commands["burrito"](message, tokens);
+        }
+        
+        if (command.charAt(0) === commandCharacter){
+            //valid command
+            command = command.toLowerCase().substring(1);
+            commands[command](message, tokens);
+        }
+    }
+    catch {
+        return;
+    }
+}
+                </code></pre>
+                <button class="copy-btn">Copy</button>
+                <br><br>
+                    
+                <p>
+                    Now, anytime a message is sent, the bot will first check if it is a valid message by scanning the first character that you can set to anything. A lot of bots use symbols such as ! or ? but you can use anything. You can also have specific cases to check in this section if you would like.
+                </p>
+                    
+                <p>
+                    Anytime you create a new command, you must create a .js file for it in the commands folder and add it to the top with a require statement and place it in the commands array. An example of a simple reply command looks like this:
+                </p>
+                    
+                <pre><code class="language-javascript">
+module.exports = function (message, args) {
+    if (!message?.author.bot) {
+        message.reply('Yum, I love burritos!');
+    }
+}
+                </code></pre>
+                <button class="copy-btn">Copy</button>
+                <br><br>
+                    
+                <p>
+                    If you want your bot to react to its own message with emojis, you can use the following:
+                </p>
+                    
+                <pre><code class="language-javascript">
+module.exports = async function (message, args) {
+    try {
+        const sentMessage = await message.reply('react');
+
+        await sentMessage.react('❤️');
+        await sentMessage.react('💙');
+        await sentMessage.react('💚');
+    } catch (error) {
+        console.error('Error reacting to message:', error);
+    }
+}
+                </code></pre>
+                <button class="copy-btn">Copy</button>
+                <br><br>
+                    
+                <p>
+                    If you want a more complex reaction system tied to roles within your server, you can use the following:
+                </p>
+                    
+                <pre><code class="language-javascript">
+const { MessageActionRow, MessageButton, MessageEmbed } = require('discord.js');
+
+module.exports = async function (message) {
+    try {
+        const roleMapping = {
+            '❤️': 'VIP',
+            '👍': 'Member',
+            '😎': 'Guest',
+        };
+
+        const sentMessage = await message.reply({
+            content: 'React with an emoji to get a role:\n❤️ - VIP\n👍 - Member\n😎 - Guest',
+        });
+
+        await sentMessage.react('❤️');
+        await sentMessage.react('👍');
+        await sentMessage.react('😎');
+
+        const filter = (reaction, user) => !user.bot && Object.keys(roleMapping).includes(reaction.emoji.name);
+        const collector = sentMessage.createReactionCollector({ filter, time: 60000, dispose: true });
+
+        collector.on('collect', async (reaction, user) => {
+            console.log(`Collected reaction: ${reaction.emoji.name} from ${user.tag}`);
+            const roleName = roleMapping[reaction.emoji.name];
+            console.log(`Role to be assigned: ${roleName}`);
+
+            try {
+                const role = message.guild.roles.cache.find(r => r.name === roleName);
+                if (!role) {
+                    console.error(`Role "${roleName}" not found.`);
+                    return;
+                }
+
+                const member = await message.guild.members.fetch(user.id);
+
+                if (member.roles.cache.has(role.id)) {
+                    // await user.send(`You already have the "${roleName}" role.`);
+                    return;
+                }
+
+                await member.roles.add(role);
+
+                // await user.send(`You have been assigned the "${roleName}" role!`);
+            } catch (error) {
+                console.error('Error assigning role:', error);
+            }
+        });
+
+        collector.on('remove', async (reaction, user) => {
+            console.log(`Removed reaction: ${reaction.emoji.name} from ${user.tag}`);
+            const roleName = roleMapping[reaction.emoji.name];
+            console.log(`Role to be removed: ${roleName}`);
+
+            try {
+                const role = message.guild.roles.cache.find(r => r.name === roleName);
+                if (!role) {
+                    console.error(`Role "${roleName}" not found.`);
+                    return;
+                }
+
+                const member = await message.guild.members.fetch(user.id);
+
+                if (!member.roles.cache.has(role.id)) {
+                    return;
+                }
+
+                await member.roles.remove(role);
+                console.log(`Removed "${roleName}" role from ${user.tag}`);
+            } catch (error) {
+                console.error('Error removing role:', error);
+            }
+        });
+
+        collector.on('end', (collected) => {
+            if (collected.size === 0) {
+                sentMessage.edit({ content: 'No reactions received, so no roles were assigned.' });
+            } else {
+                sentMessage.edit({ content: 'Roles have been assigned based on reactions!' });
+            }
+        });
+
+    } catch (error) {
+        console.error('Error sending message with role assignment:', error);
+    }
+};
+                </code></pre>
+                <button class="copy-btn">Copy</button>
+                <br><br>
+                    
+                <p>
+                    Make sure the name of the roles is the same as written in roleMapping. And finally, you can create a reply that includes buttons that have their own features:
+                </p>
+                    
+                <pre><code class="language-javascript">
+const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
+
+module.exports = async function (message) {
+    try {
+        // Create the buttons using the new syntax
+        const row = new ActionRowBuilder()
+            .addComponents(
+                new ButtonBuilder()
+                    .setCustomId('yes')  // Custom ID for the 'Yes' button
+                    .setLabel('Yes')     // Label to display
+                    .setStyle(ButtonStyle.Success),  // Style for the button (green color)
+                new ButtonBuilder()
+                    .setCustomId('no')  // Custom ID for the 'No' button
+                    .setLabel('No')     // Label to display
+                    .setStyle(ButtonStyle.Danger), // Style for the button (red color)
+                new ButtonBuilder()
+                    .setCustomId('maybe')  // Custom ID for the 'Maybe' button
+                    .setLabel('Maybe')     // Label to display
+                    .setStyle(ButtonStyle.Secondary) // Style for the button (gray color)
+            );
+
+        // Send the message with buttons
+        const sentMessage = await message.reply({
+            content: 'Please choose an option:',
+            components: [row],  // Attach the row with buttons to the message
+        });
+
+        // Create a message collector to listen for button interactions
+        const filter = interaction => interaction.isButton() && interaction.message.id === sentMessage.id;
+        const collector = sentMessage.createMessageComponentCollector({ filter, time: 15000 });  // Collect interactions for 15 seconds
+
+        // Handle button interactions
+        collector.on('collect', async (interaction) => {
+            if (interaction.customId === 'yes') {
+                await interaction.reply({ content: 'You selected Yes!', ephemeral: true });
+            } else if (interaction.customId === 'no') {
+                await interaction.reply({ content: 'You selected No!', ephemeral: true });
+            } else if (interaction.customId === 'maybe') {
+                await interaction.reply({ content: 'You selected Maybe!', ephemeral: true });
+            }
+        });
+
+        // Handle time expiration
+        collector.on('end', collected => {
+            if (collected.size === 0) {
+                sentMessage.edit({ content: 'You did not select any option.', components: [] });
+            } else {
+                sentMessage.edit({ content: 'Thanks for your response!', components: [] });
+            }
+        });
+
+    } catch (error) {
+        console.error('Error sending buttons:', error);
+    }
+};
+                </code></pre>
+                <button class="copy-btn">Copy</button>
+                <br><br>
+                    
+                <p>
+                    A note for this code, if ephemeral is set to true, that means that only the user who entered the command will see the message. Currently, this code only replies to the user with their response but you can go as deep as you want and implement your own functions for each option. You can even edit how long the messages stay active. You are free to do as you wish.
+                </p>
+                    
+                <p id="hosting">
+                    Now, for hosting there are two options: Locally, and online. For local it is simple, you just run the node . command and it is done. You do have to keep vscode open for this to work but if you have an extra machine that stays on or you do not mind keeping it open, this is the easiest and simplest way.
+                </p>
+                    
+                <p>
+                    If you prefer online hosting, there are many options but the free options are limited. Most online hosting sites will have free tiers that you can use but will charge you if you pass them. <a href="https://cloud.google.com/run/" target="_blank">Google Cloud Console/App Engine</a> is an option. There are many online tutorials and videos to help set that up. Another option is Cloudflare which Discord has an <a href="https://discord.com/developers/docs/tutorials/hosting-on-cloudflare-workers" target="_blank">official tutorial<a> for setting it up.
+                </p>
+                    
+                <p>
+                    In the end, it is almost impossible to find a perfectly 100% free solution online but if your bot is on the lower end and will only be in a few servers, the online free options should be enough. Just make sure to keep an eye on them and that you do not get charged!
+                </p>
+                    
+                <p>
+                    And that's it! If you made it this far, I hope you were able to successfully create your bot and found a reasonable way for you to host it. If you need any more help, there are many online videos and documentation that can help, or you can leave a comment down below!
+                </p>                    
+            </div>
+            <!-- End Post Content -->
+
+            <!-- Begin Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    <li><a>Coding</a></li>
+                    <li><a>Discord</a></li>
+                    <li><a>Bot</a></li>
+                    <li><a>Hosting</a></li>
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Start Comments
+================================================== -->
+<div id="comments" class="container col-md-6 col-xs-12">
+    <div class="">
+        <script src="https://giscus.app/client.js"
+            data-repo="alessioamo/What-Comes-Next"
+            data-repo-id="R_kgDOL1hzEQ"
+            data-category="General"
+            data-category-id="DIC_kwDOL1hzEc4CfEHA"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
+</div>
+<!-- End Comments
+================================================== -->
+
+<div class="hideshare"></div>
+
+<!-- Begin Related
+================================================== -->
+<div class="graybg">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            <!-- begin post -->
+			<div class="col-md-4">
+				<div class="card">
+					<a href="post5.html"> 
+						<img class="img-fluid img-thumb" src="assets/img/searchBar1.jpg" alt=""> 
+					</a>
+					<div class="card-block">
+						<h2 class="card-title"><a href="post5.html">Adding a Search Bar to Your Website</a></h2> 
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="meta-footer-thumb">
+									<a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+								</span>
+								<span class="author-meta">
+									<span class="post-name"><a href="author.html">Alessio</a></span><br/>
+									<span class="post-date">September 25 2024</span><span class="dot"></span><span class="post-read">8 min read</span> 
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end post -->
+
+			<!-- begin post -->
+			<div class="col-md-4">
+				<div class="card">
+					<a href="post3.html">
+					<img class="img-fluid img-thumb" src="assets/img/seo1.jpg" alt="">
+					</a>
+					<div class="card-block">
+						<h2 class="card-title"><a href="post3.html">Search Engine Optimization (SEO) and Adding Your Website to Google</a></h2>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="meta-footer-thumb">
+									<a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+								</span>
+								<span class="author-meta">
+									<span class="post-name"><a href="author.html">Alessio</a></span><br/>
+								<span class="post-date">31 July 2024</span><span class="dot"></span><span class="post-read">7 min read</span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end post -->
+
+			<!-- begin post -->
+			<div class="col-md-4">
+				<div class="card">
+					<a href="post2.html">
+					<img class="img-fluid img-thumb" src="assets/img/comments1.png" alt="">
+					</a>
+					<div class="card-block">
+						<h2 class="card-title"><a href="post2.html">How to Add Comments to Your Static Website</a></h2>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="meta-footer-thumb">
+									<a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+								</span>
+								<span class="author-meta">
+									<span class="post-name"><a href="author.html">Alessio</a></span><br/>
+								<span class="post-date">3 July 2024</span><span class="dot"></span><span class="post-read">6 min read</span>
+								</span>
+								<!-- <span class="post-read-more"><a href="post1.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end post -->
+        </div>
+    </div>
+</div>
+<!-- End Related Posts
+================================================== -->
+
+<!-- Begin Twitter Timeline
+================================================== -->
+<div class="container margtop3rem">
+<!-- <a class="twitter-grid" href=""></a> <script async src="" charset="utf-8"></script> -->
+</div>
+<!-- End Twitter Timeline
+================================================== -->
+
+<!-- Begin Footer
+================================================== -->
+<div class="container">
+    <div class="footer">
+        <p class="pull-left">
+        </p>
+        <p class="pull-right">
+        </p>
+        <div class="clearfix">
+        </div>
+    </div>
+</div>
+<!-- End Footer
+================================================== -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="assets/js/mediumish.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+</body>
+</html>

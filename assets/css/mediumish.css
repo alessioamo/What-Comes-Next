@@ -555,7 +555,7 @@ code {
 	color: rgb(206, 206, 0);
 }
 
-.copyBtn {
+.copyBtn, .copy-btn {
 	background-color: #007BFF;
 	color: white;
 	border: none;
@@ -566,7 +566,7 @@ code {
 	margin-right: 10px;
 }
 
-.copyBtn:hover {
+.copyBtn:hover, .copy-btn:hover {
 	background-color: #0056b3;
 }
 

@@ -5,7 +5,7 @@ Programming is the art of adding bugs to an empty text file.
 Months of testing and bug fixes can save you hours of planning.
 Hours of trial and error will save you minutes of reading documentation.
 Debugging is like being a detective in a crime movie where you're also the murderer.
-I have a weird bug in my program where when I solve one bug, three more appear somewhere else.
+DONE - I have a weird bug in my program where when I solve one bug, three more appear somewhere else.
 A programmer will spend a week creating a program to automate something that would've taken less than an hour to complete manually.
 If your program has errors when running but it still works, you have a working program.
 DONE - Code doesn't need to be pretty to function, but you will thank your past self if it is.
