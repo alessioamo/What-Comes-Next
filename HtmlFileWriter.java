@@ -152,23 +152,22 @@ public class HtmlFileWriter {
     // TODO - add new libraries to this structure
 
     public static void main(String[] args) {
-        String fileName = "post6.html";
+        String fileName = "post7.html";
         String pageTitle = "What Comes Next";
         String authorName = "Alessio";
         String authorDescription = "Just a developer who loves to create unique things!";
 
-        String postDate = "November 20 2024";
-        String readTime = "8";
-        String postTitle = "How to Create a Discord Bot";
-        String featuredImage = "discordBot1.png";
-        String featuredImage2 = "discordBot2.png";
-        String postContent = "A guide on how to create your own custom Discord bot with custom commands.";
-        String[] tags = {"Coding", "Web Development", "Website", "Search"};
+        String postDate = "March 12 2025";
+        String readTime = "6";
+        String postTitle = "My First Hackathon";
+        String featuredImage = "firstHackathon1.png";
+        String featuredImage2 = "firstHackathon2.png";
+        String postContent = "My story about completing my first hackathon.";
+        String[] tags = {"Coding", "Game Development", "Devlog", "Hackathon"};
         String keywords = "blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation, " +
                             "what, comes, come, next, what comes next, what come next, " +
-                            "discord, bot, discord bot, js, node js, node, node.js, host, hosting, free, free hosting, free host, create discord bot, create bot, api, command" + 
-                            "vscode, cloudfare, google, search, console, google search console" + 
-                            "bootstrap, html, js, css, card, cards, chatgpt, gpt";
+                            "hackathon, first, concordia, university, concordia university, conuhacks, game, development, game development, game dev, " + 
+                            "unity, wild, west, wild west, horse, cowboy, 2d, platformer, puzzle, top down, shooter, roguelike, beenox";
 
         // Create the HTML content
         StringBuilder htmlContent = new StringBuilder();

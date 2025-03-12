@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A blog about what comes next for a Computer Science graduate">
+    <meta name="keywords" content="blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation, what, comes, come, next, what comes next, what come next, hackathon, first, concordia, university, concordia university, conuhacks, game, development, game development, game dev, unity, wild, west, wild west, horse, cowboy, 2d, platformer, puzzle, top down, shooter, roguelike, beenox">
+    <meta name="author" content="Alessio">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>What Comes Next</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/mediumish.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Begin Nav
+================================================== -->
+<nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+        <!-- Begin Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo.png" alt="logo">
+        </a>
+        <!-- End Logo -->
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <!-- Begin Menu -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="author.html">Author</a>
+                </li>
+            </ul>
+            <!-- End Menu -->
+            <!-- Begin Search -->
+            <form class="form-inline my-2 my-lg-0">
+                <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Search">
+                <span class="search-icon" onclick="search()"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+            </form>
+            <!-- End Search -->
+        </div>
+    </div>
+</nav>
+<!-- End Nav
+================================================== -->
+
+<!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Begin Fixed Left Share -->
+        <div class="col-md-1 col-xs-12">
+            <div class="share">
+                <p>
+                    Talk
+                </p>
+                <ul>
+                    <li>
+                        <a href="#comments">
+                            <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29"><path d="M21.27 20.058c1.89-1.826 2.754-4.17 2.754-6.674C24.024 8.21 19.67 4 14.1 4 8.53 4 4 8.21 4 13.384c0 5.175 4.53 9.385 10.1 9.385 1.007 0 2-.14 2.95-.41.285.25.592.49.918.7 1.306.87 2.716 1.31 4.19 1.31.276-.01.494-.14.6-.36a.625.625 0 0 0-.052-.65c-.61-.84-1.042-1.71-1.282-2.58a5.417 5.417 0 0 1-.154-.75zm-3.85 1.324l-.083-.28-.388.12a9.72 9.72 0 0 1-2.85.424c-4.96 0-8.99-3.706-8.99-8.262 0-4.556 4.03-8.263 8.99-8.263 4.95 0 8.77 3.71 8.77 8.27 0 2.25-.75 4.35-2.5 5.92l-.24.21v.32c0 .07 0 .19.02.37.03.29.1.6.19.92.19.7.49 1.4.89 2.08-.93-.14-1.83-.49-2.67-1.06-.34-.22-.88-.48-1.16-.74z"></path></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Fixed Left Share -->
+
+        <!-- Begin Post -->
+        <div class="col-md-10 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                <!-- Begin Top Meta -->
+                <div class="row post-top-meta">
+                    <div class="col-md-2">
+                        <a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="author.html">Alessio</a><br>
+                        <span class="author-description">Just a developer who loves to create unique things!</span><br>
+                        <span class="post-date">March 12 2025</span><span class="dot"></span><span class="post-read">6 min read</span>
+                    </div>
+                </div>
+                <!-- End Top Meta -->
+
+                <h1 class="posttitle">My First Hackathon</h1>
+
+            </div>
+
+            <!-- Begin Featured Image -->
+            <img class="featured-image img-fluid" src="assets/img/firstHackathon1.png" alt="">
+            <!-- End Featured Image -->
+
+            <!-- Begin Post Content -->
+            <div class="article-post">
+                <p>
+                    It's been a little while since my last post but that doesn't mean I haven't been busy! In the past few months, I have spent most of my focus towards game development to learn more about it and to try and create something new. Video games have always fascinated me and I always like to brainstorm potential ideas for games and now I feel as though I can actually bring those ideas to life.
+                </p>
+                    
+                <p>
+                    My game development journey began in 2023 when I downloaded Unity and started following some online tutorials. After completing a few tutorials, I proceeded to create my first original game. It was a simple side-scrolling 2D platformer where you would have to time your jumps and slides to avoid obstacles and make it to the end, similar to Geometry dash. I added unique collectibles that you can acquire by taking unique routes and tried my hand at some pixel art for the game itself.
+                </p>
+                    
+                <p>
+                    Looking back at it now, it's a very simple game but I believe it's a good first game to have created. I didn't want to start fresh out the gate with my <i>"dream game"</i> idea because frankly, I just didn't have the experience. Furthermore, creating one game wouldn't magically fix that so I told myself that I should create a few more games before committing to my big idea. And that's where 2024 comes in as my game development year.
+                </p>
+                    
+                <p>
+                    In a past post, I talked about a lot of the projects that I was working on and ideas for new projects I wanted to start. From that list there were two games on it. The first was a 2D puzzle platformer named Chroma where you would solve puzzles using colorful abilities that you unlocked as you progressed through levels. This was a simple game that I created to act as practice for me for various mechanics such as platforming, movement abilities, portals, and more. It turned out quite well in the end and I managed to put together many levels and even an alternate ending depending if you collected all the secret coins. After completing it, I felt a new determination to expand my knowledge and create more games. This is when <i>Fast Food Frenzy</i> was born.
+                </p>
+                    
+                <p>
+                    Next on my list of game ideas I wanted to create to practice my skills and learn more about game development, was a top down shooter where you would have to defend yourself against infinite enemies (similar to <a href="https://store.steampowered.com/app/1794680/Vampire_Survivors/" target="_blank">Vampire Survivors</a>). I wanted to use this game to learn more about inventory systems, upgradeable items, weapon systems, and most importantly, art. I have very little experience when it comes to art and I wanted to try and learn more about it. To keep it simple for myself, I decided to focus on pixel art and purchased the program Aseprite to help. I followed some quick tutorials to learn about the program and read through <a href="https://michafrar.gumroad.com/l/pixel-logic" target="_blank">Pixel Logic - A Guide to Pixel Art by Michael Azzi</a>. This is an incredibly well put together guide that teaches you the basics and even some more complex ideas behind pixel art. With my newfound knowledge, I began my next game.
+                </p>
+                    
+                <div class="container-image">
+                    <img src="assets/img/firstHackathon-post-5.png">
+                </div>
+
+                <br>
+                    
+                <p>
+                    I needed to come up with a unique theme for this game so I could stand out and also practice my art. That's when I came up with the idea that you are defending your restaurant from an endless horde of zombies and you're using the stuff you can find in the restaurant to do so. I could just picture an employee throwing burgers and ketchup bottles at zombies to save himself. It was both comedic and practical as it gave me many ideas for designs to draw. I spent a few weeks working on this project and made it pretty far. I had the enemy spawn system, player inventory, level up system, random upgrade selection, and more. It was starting to shape into the game I envisioned. However, as February 1st approached, development was put to a halt.
+                </p>
+
+                <blockquote>
+                    Your first game should never be your dream game.
+                </blockquote>
+                    
+                <p>
+                    And finally we have reached the main topic of this post, my first hackathon. Now in case you don't know what a hackathon is, it is basically an event where people come together and try to develop something new in a limited time frame. I have joined a hackathon before in the past and participated, but my team and I were very busy and we didn't have enough time to commit to the project we were building. So technically this was my second hackathon that I participated in, but it felt like my first one because I attended in person and actually submitted a project. It was the ConUHacks IX hosted by Concordia University. ConUHacks is the largest hackathon in Quebec and it has many sponsors that also have their own unique challenges they give to students that come with prizes as well. The sponsors range from tech companies, to cyber security companies, to game companies, and more. I wasn't looking to win any prizes (obviously that would be nice) but rather to get more experience.
+                </p>
+                    
+                <p>
+                    I teamed up with two of my friends and on the day of the competition, we woke up before the sun rose and headed towards the university. We got our hackathon swag (a bag, shirt, and some other little things) and enjoyed a complimentary breakfast. We headed into an empty room and claimed it for ourselves. We set up and started discussing potential ideas. Our main goal was to try out one of the sponsor challenges but we wanted to have a backup plan in case the challenges didn't appeal to us. An important note is that this year's hackathon was a wild west theme so we wanted to fit into that as well. We ended up coming up with an idea for a game where you are in a saloon in the wild west, and you have to play minigames scattered around the bar to gain enough gold to go on your way. We really liked this idea so we continued brainstorming minigame ideas up until the hackathon began.
+                </p>
+                    
+                <p>
+                    As the clock struck 11, we watched as all the sponsors began posting their challenges. We quickly read through them all but didn't connect with any of them. They all seemed very vague or just not that interesting to create (and one was even the same challenge as the year before). We did notice one challenge that caught our eye. Beenox, a video game developing company, had a challenge to create a sort of 1v1 top down shooter. When I read this, it felt like a part of me was awoken. I spent the past few weeks creating something exactly like that! We were still really attached to our saloon idea so we decided to combine the two. We created a quick story to connect the ideas together and it went like this:
+                </p>
+
+                <div class="container-image">
+                    <img src="assets/img/firstHackathon-post-2.png">
+                </div>
+
+                <br>
+
+                <div class="container-image">
+                    <img src="assets/img/firstHackathon-post-1.png">
+                </div>
+
+                <br>
+                    
+                <p>
+                    You play as an outlaw who rides through the desert on a horse with no name. While passing through a small town, your horse ends up breaking down. You walk into the nearby saloon and find many townsfolk enjoying themselves. You must gain enough gold by beating them in minigames in order to repair your horse. Beware however, if you beat them, they will get angry and have a chance to initiate a shooting battle with you. Once you have enough gold, you can go on your way.
+                </p>
+
+                <div class="container-image">
+                    <img src="assets/img/firstHackathon-post-3.png">
+                </div>
+
+                <br>
+
+                <p>
+                    So we got to work designing the interior, creating the minigames, and making the top down shooter part. We had many ideas that we wanted to include that unfortunately didn't make the final cut. These include an intro cutscene, more minigames, a bar mixing minigame, a more expanded top down shooting section (with upgrades) and a final stand-off outside of the saloon. What did end up making it into the game were 3 minigames including Blackjack, darts, and a <i>"Where's Waldo"</i> type game where you have to find the wanted criminal. We also added in the top down shooter section with enemies that vary in speed, damage, and shot type. Finally, we implemented a simple ending where when you have enough gold, you can simply leave the saloon and ride off into the sunset.
+                </p>
+
+                <div class="container-image">
+                    <img src="assets/img/firstHackathon-post-4.png">
+                </div>
+
+                <br>
+                    
+                <p>
+                    By the next morning, we had a working game that was very polished. There were no known bugs and the gameplay flowed nicely. We took a small video demo and submitted our project the next morning. 24 hours later and this was our final result.
+                </p>
+
+                <p>
+                    <a href="https://devpost.com/software/the-outlaw" target="_blank">https://devpost.com/software/the-outlaw</a>
+                </p>
+                    
+                <p>
+                    Once we submitted it, I made my way back to the university and prepared for the judging period. It didn't last that long and a couple of judges came by, listened to our explanations, and tested out the game. There were a few passing students that also tried it out and overall, it seemed like everyone enjoyed it and liked the idea. Unfortunately, we didn't win anything but we were still satisfied with what we created in such a small time frame. Especially since I was the only one with recent game development experience on the team.
+                </p>
+                    
+                <p>
+                    Overall, the hackathon weekend was a success for me because it was very fun to participate in and it actually did help me learn a few new things. It also acted as good preparation for an upcoming game jam that I was going to take part in, but maybe I'll save that for a future post. For now, I'm going to continue my focus towards my top down shooter game that I was initially working on and hopefully make some good progress in time for the next post.
+                </p>                    
+            </div>
+            <!-- End Post Content -->
+
+            <!-- Begin Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    <li><a>Coding</a></li>
+                    <li><a>Game Development</a></li>
+                    <li><a>Devlog</a></li>
+                    <li><a>Hackathon</a></li>
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Start Comments
+================================================== -->
+<div id="comments" class="container col-md-6 col-xs-12">
+    <div class="">
+        <script src="https://giscus.app/client.js"
+            data-repo="alessioamo/What-Comes-Next"
+            data-repo-id="R_kgDOL1hzEQ"
+            data-category="General"
+            data-category-id="DIC_kwDOL1hzEc4CfEHA"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
+</div>
+<!-- End Comments
+================================================== -->
+
+<div class="hideshare"></div>
+
+<!-- Begin Related
+================================================== -->
+<div class="graybg">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            <!-- begin post -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <a href="post4.html">
+                        <img class="img-fluid img-thumb" src="assets/img/projects1.png" alt="">
+                        </a>
+                        <div class="card-block">
+                            <h2 class="card-title"><a href="post4.html">My Current and Future Projects (2024)</a></h2>
+                            <div class="metafooter">
+                                <div class="wrapfooter">
+                                    <span class="meta-footer-thumb">
+                                        <a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+                                    </span>
+                                    <span class="author-meta">
+                                        <span class="post-name"><a href="author.html">Alessio</a></span><br/>
+                                    <span class="post-date">28 August 2024</span><span class="dot"></span><span class="post-read">8 min read</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			<!-- end post -->
+
+            <!-- begin post -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <a href="post6.html"> 
+                            <img class="img-fluid img-thumb" src="assets/img/discordBot1.png" alt=""> 
+                        </a>
+                        <div class="card-block">
+                            <h2 class="card-title"><a href="post6.html">How to Create a Discord Bot</a></h2> 
+                            <div class="metafooter">
+                                <div class="wrapfooter">
+                                    <span class="meta-footer-thumb">
+                                        <a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+                                    </span>
+                                    <span class="author-meta">
+                                        <span class="post-name"><a href="author.html">Alessio</a></span><br/>
+                                        <span class="post-date">November 20 2024</span><span class="dot"></span><span class="post-read">8 min read</span> 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- end post -->
+
+            <!-- begin post -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <a href="post5.html"> 
+                            <img class="img-fluid img-thumb" src="assets/img/searchBar1.jpg" alt=""> 
+                        </a>
+                        <div class="card-block">
+                            <h2 class="card-title"><a href="post5.html">Adding a Search Bar to Your Website</a></h2> 
+                            <div class="metafooter">
+                                <div class="wrapfooter">
+                                    <span class="meta-footer-thumb">
+                                        <a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+                                    </span>
+                                    <span class="author-meta">
+                                        <span class="post-name"><a href="author.html">Alessio</a></span><br/>
+                                        <span class="post-date">September 25 2024</span><span class="dot"></span><span class="post-read">8 min read</span> 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			<!-- end post -->
+        </div>
+    </div>
+</div>
+<!-- End Related Posts
+================================================== -->
+
+<!-- Begin Twitter Timeline
+================================================== -->
+<div class="container margtop3rem">
+<!-- <a class="twitter-grid" href=""></a> <script async src="" charset="utf-8"></script> -->
+</div>
+<!-- End Twitter Timeline
+================================================== -->
+
+<!-- Begin Footer
+================================================== -->
+<div class="container">
+    <div class="footer">
+        <p class="pull-left">
+        </p>
+        <p class="pull-right">
+        </p>
+        <div class="clearfix">
+        </div>
+    </div>
+</div>
+<!-- End Footer
+================================================== -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="assets/js/mediumish.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+</body>
+</html>
