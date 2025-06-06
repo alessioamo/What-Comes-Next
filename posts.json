@@ -1,5 +1,43 @@
 [
     {
+        "title": "One Year Later",
+        "description": "Looking back on my first year post-graduation.",
+        "date": "5 June 2025",
+        "link": "post8.html",
+        "image": "assets/img/oneYearLater1.png",
+        "tags": ["Personal", "Coding", "Game Development", "Devlog", "Projects"],
+        "keywords": [
+            "blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation, ",
+            "what, comes, come, next, what comes next, what come next, ",
+            "hackathon, first, concordia, university, concordia university, conuhacks, game, development, game development, game dev, ",
+            "unity, wild, west, wild west, horse, cowboy, 2d, platformer, puzzle, top down, shooter, roguelike, beenox, ",
+            "discord, bot, discord bot, js, node js, node, node.js, host, hosting, free, free hosting, free host, create discord bot, create bot, ",
+            "api, command, vscode, cloudfare, google, search, console, google search console, bootstrap, html, js, css"
+        ]
+    },
+    {
+        "title": "My First Hackathon",
+        "description": "My story about completing my first hackathon.",
+        "date": "12 March 2025",
+        "link": "post7.html",
+        "image": "assets/img/firstHackathon1.png",
+        "tags": ["Coding", "Game Development", "Devlog", "Hackathon"],
+        "keywords": [
+            "blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation, what, comes, come, next, what comes next, what come next, hackathon, first, concordia, university, concordia university, conuhacks, game, development, game development, game dev, unity, wild, west, wild west, horse, cowboy, 2d, platformer, puzzle, top down, shooter, roguelike, beenox"
+        ]
+    },
+    {
+        "title": "How to Create a Discord Bot",
+        "description": "A guide on how to create your own Discord bot with custom commands.",
+        "date": "20 November 2024",
+        "link": "post6.html",
+        "image": "assets/img/discordBot1.png",
+        "tags": ["Coding", "Discord", "Bot", "Hosting"],
+        "keywords": [
+            "blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation, what, comes, come, next, what comes next, what come next, discord, bot, discord bot, js, node js, node, node.js, host, hosting, free, free hosting, free host, create discord bot, create bot, api, command, vscode, cloudfare, google, search, console, google search console, bootstrap, html, js, css, card, cards, chatgpt, gpt"
+        ]
+    },
+    {
         "title": "Adding a Search Bar to Your Website",
         "description": "A guide on how to add your own custom search bar to any website.",
         "date": "25 September 2024",

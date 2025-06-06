@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A blog about what comes next for a Computer Science graduate">
+    <meta name="keywords" content="blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation, what, comes, come, next, what comes next, what come next, hackathon, first, concordia, university, concordia university, conuhacks, game, development, game development, game dev, unity, wild, west, wild west, horse, cowboy, 2d, platformer, puzzle, top down, shooter, roguelike, beenox, discord, bot, discord bot, js, node js, node, node.js, host, hosting, free, free hosting, free host, create discord bot, create bot, api, command, vscode, cloudfare, google, search, console, google search console, bootstrap, html, js, css">
+    <meta name="author" content="Alessio">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>What Comes Next</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/mediumish.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Begin Nav
+================================================== -->
+<nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+        <!-- Begin Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo.png" alt="logo">
+        </a>
+        <!-- End Logo -->
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <!-- Begin Menu -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="author.html">Author</a>
+                </li>
+            </ul>
+            <!-- End Menu -->
+            <!-- Begin Search -->
+            <form class="form-inline my-2 my-lg-0">
+                <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Search">
+                <span class="search-icon" onclick="search()"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+            </form>
+            <!-- End Search -->
+        </div>
+    </div>
+</nav>
+<!-- End Nav
+================================================== -->
+
+<!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Begin Fixed Left Share -->
+        <div class="col-md-1 col-xs-12">
+            <div class="share">
+                <p>
+                    Talk
+                </p>
+                <ul>
+                    <li>
+                        <a href="#comments">
+                            <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29"><path d="M21.27 20.058c1.89-1.826 2.754-4.17 2.754-6.674C24.024 8.21 19.67 4 14.1 4 8.53 4 4 8.21 4 13.384c0 5.175 4.53 9.385 10.1 9.385 1.007 0 2-.14 2.95-.41.285.25.592.49.918.7 1.306.87 2.716 1.31 4.19 1.31.276-.01.494-.14.6-.36a.625.625 0 0 0-.052-.65c-.61-.84-1.042-1.71-1.282-2.58a5.417 5.417 0 0 1-.154-.75zm-3.85 1.324l-.083-.28-.388.12a9.72 9.72 0 0 1-2.85.424c-4.96 0-8.99-3.706-8.99-8.262 0-4.556 4.03-8.263 8.99-8.263 4.95 0 8.77 3.71 8.77 8.27 0 2.25-.75 4.35-2.5 5.92l-.24.21v.32c0 .07 0 .19.02.37.03.29.1.6.19.92.19.7.49 1.4.89 2.08-.93-.14-1.83-.49-2.67-1.06-.34-.22-.88-.48-1.16-.74z"></path></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Fixed Left Share -->
+
+        <!-- Begin Post -->
+        <div class="col-md-10 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                <!-- Begin Top Meta -->
+                <div class="row post-top-meta">
+                    <div class="col-md-2">
+                        <a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="author.html">Alessio</a><br>
+                        <span class="author-description">Just a developer who loves to create unique things!</span><br>
+                        <span class="post-date">June 5 2025</span><span class="dot"></span><span class="post-read">6 min read</span>
+                    </div>
+                </div>
+                <!-- End Top Meta -->
+
+                <h1 class="posttitle">One Year Later</h1>
+
+            </div>
+
+            <!-- Begin Featured Image -->
+            <img class="featured-image img-fluid" src="assets/img/oneYearLater3.png" alt="">
+            <!-- End Featured Image -->
+
+            <!-- Begin Post Content -->
+            <div class="article-post">
+                <p>
+                    It's been one year since I graduated and started this blog. It feels almost as if it was yesterday when I heard my name pronounced incorrectly, and then walked across the stage to receive my diploma. Sometimes, it feels like the weeks just fly by and you're already in the next season. It's been an eventful year for sure, but for myself and the whole world. So after 365 days, what have I accomplished?
+                </p>
+
+                <p>
+                    I've started and completed many projects over the past few months and I've talked a bit about them in my recent posts. Since my last one focused a lot on my game dev journey up until my first hackathon, I'll quickly go through it again. The first project I started working on after my graduation was my 2D puzzle platformer game based around using color-themed abilities to progress through the levels. This was my first game I completed from scratch (not including the games I made during tutorials) and overall, I'm very proud of it. I did suffer a bit of scope creep as I wanted this game to be a simple project to get me started but it ended up expanding beyond that.
+                </p>
+
+                <p>
+                    I wanted to try something new for the platforms and movement so I attempted to use raycasting to detect collisions. This took a lot of time to get working but I'm glad that I tried it out in case I ever want to revisit it in the future. Other than that, I ended up adding collectibles in the levels that you had to think out of the box to acquire and if you obtained them all, you would unlock a secret ending. Finally, I spent a lot of time and effort with the level design, trying to create puzzles that weren't too easy, but also not impossible. It was difficult to find a good balance and to adapt the later levels to utilize the newly unlocked powers. I ended up completing the project in around October.
+                </p>
+
+                <div class="container-image">
+                    <img src="assets/img/oneYear-post-1.gif">
+                </div>
+                <br>
+
+                <p>
+                    Not that long after I completed it, I began my next project: My top-down 2D roguelike shooter. I've always wanted to create a game in this genre, but I never knew what theme to give it in order to be unique. So, I did some brainstorming and ended with this: You are an employee in a fast food restaurant and while working one day, the town starts to be overrun with zombies. Now, you must defend yourself (and your restaurant) using whatever you can find around you.
+                </p>
+
+                <p>
+                    The main idea of the game is to be a bit comedic and not take itself too seriously as you'll be attacking zombies by flinging burgers at them. It started as a small idea but since then, it has expanded into so much. I have created over a hundred weapons and items, over a hundred enemy and boss types, and so much more. I ended up having to take a break from this project because I had other plans coming up.
+                </p>
+
+                <p>
+                    Around Christmas time, I made some improvements and additions to my web-based Jeopardy and Family Feud games so that I could play them with my family during the holidays. Then in January, I challenged myself to create an entire game from scratch in just 24 hours. To add a bit of a spin on it, I interviewed some friends and asked them some general questions and ended up using their ideas and voices to build my game. Once the 24 hours were complete, I gave it to them to try it out and to hear their reactions once they learnt what the purpose of the interviews was.
+                </p>
+
+                <div class="container-image">
+                    <img src="assets/img/oneYear-post-2.png">
+                </div>
+                <br>
+
+                <p>
+                    Surprisingly, there weren't any game-breaking bugs, just some small issues here and there but overall, I was happy with the result. I managed to create 5 separate characters, each with their own abilities, and multiple enemy types that were scattered through a few levels. What I'm most proud of was the boss fight I created at the end as it was very fun to play and it taught me a lot about creating engaging boss fights. At the end of the day, it was made in 24 hours so I didn't expect it to be amazing, but it was good enough for me.
+                </p>
+
+                <blockquote>
+                    Debugging is like being a detective in a crime movie where you're also the murderer.
+                </blockquote>
+
+                <p>
+                    After this, I participated in my <a href="https://alessioamo.github.io/What-Comes-Next/post7.html" target="_blank">first hackathon</a> where I created a game with two of my friends. It was a <a href="https://devpost.com/software/the-outlaw" target="_blank">simple game</a> but its premise gives it the capabilities to be very expandable. After that, I participated in a <a href="https://itch.io/jam/brackeys-13/rate/3348470" target="_blank">7-day online game jam</a> with over 2000 submissions. I had one friend who helped me make the art, and another who helped with music, while I created the game and implemented sound effects. We ended up placing 171/2183 which we thought was incredible given this was our first time doing this. We had a lot of fun and this also taught me a lot about game development.
+                </p>
+
+                <div class="container-image">
+                    <img src="assets/img/oneYear-post-3.png">
+                </div>
+                <br>
+
+                <p>
+                    Which leads into the last and current project that I've been working on: My roguelike shooter game. After completing the game jam, I realized that in order to scale the game to what I wanted, I would have to redo a lot of the main code. So, I decided to restart from scratch and completely refactor the code. This was a great decision because it allowed me to optimize areas so they could be scalable and allowed me to write cleaner code.
+                </p>
+
+                <p>
+                    I have also been working on improving my art skills by drawing all of the in game art from scratch, all by myself. In the game jam, I did some very small-scale art, mainly some background decorations and they weren't the greatest. So, I took it as a challenge to learn and become a better pixel artist. Here are some of the drawings I made:
+                </p>
+
+                <div class="container-image">
+                    <img src="assets/img/oneYear-post-4-1.png">
+                    <img src="assets/img/oneYear-post-4-3.png">
+                    <img src="assets/img/oneYear-post-4-5.png">
+                </div>
+                <br>
+                <div class="container-image">
+                    <img src="assets/img/oneYear-post-4-2.png">
+                    <img src="assets/img/oneYear-post-4-4.png">
+                    <img src="assets/img/oneYear-post-4-7.png">
+                </div>
+                <br>
+
+                <p>
+                    In between the larger projects in the past months, I also spent time working on other projects of mine. The most notable one is my website to <a href="https://dbdperkmaker.ca/" target="_blank">create custom assets</a> for the popular video game, Dead By Daylight. I pushed a few updates in the last year that focused primarily on new content, improved mobile UI, and bug fixes. I also updated my <a href="https://alessioamo.github.io/Portfolio/" target="_blank">portfolio website</a> whenever I completed a new task and ended up completely refactoring the website as the old one wasn't satisfying my needs.
+                </p>
+
+                <p>
+                    I also spent some of my time creating some Discord bots for some friends who wanted to add some functionalities to their servers, and a Python speech recognition software to translate your words into actions in a game. I was inspired from multiple online videos of people trying to complete games like this and wanted to try it out myself. I haven't come around to actually playing with it, but I have tested it out enough to make sure that it works. Maybe I'll get to it in the near future!
+                </p>
+
+                <p>
+                    Finally, the last thing I did in the past year was actually go on vacation. I went to the UK and spent a few days visiting the landmarks, going to the London Zoo, and even watching a game in Manchester City. It was a very fun experience and it gave me a nice break from coding as I was starting to feel a bit burnt out.
+                </p>
+
+                <div class="container-image">
+                    <img src="assets/img/oneYear-post-5.png">
+                </div>
+                <br>
+
+                <p>
+                    And now we're here! 12 months and 8 posts later, and it's time to start a new year post-graduation. I guess if there's anything I learnt during this time, it's that it's important to always try and write clean code and think of the future when you're coding. It's better to take the longer and harder path to creating a solution so that you don't have to redo it in the future when the time comes. Also, it's very important to take breaks and not burn yourself out. Working on one, or multiple projects nonstop is an easy way to get fed up with it. Try to vary the things you do and take some breaks every now and then so it doesn't start to feel like a chore. At the end of the day, coding should be something that you enjoy doing. And although there are times when you might want to yell at your computer because of the one bug you can't squash, just think about how satisfying it will be when you finally fix it… And then end up creating 3 more bugs!
+                </p>
+            </div>
+            <!-- End Post Content -->
+
+            <!-- Begin Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    <li><a>Personal</a></li>
+                    <li><a>Coding</a></li>
+                    <li><a>Game Development</a></li>
+                    <li><a>Devlog</a></li>
+                    <li><a>Projects</a></li>
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Start Comments
+================================================== -->
+<div id="comments" class="container col-md-6 col-xs-12">
+    <div class="">
+        <script src="https://giscus.app/client.js"
+            data-repo="alessioamo/What-Comes-Next"
+            data-repo-id="R_kgDOL1hzEQ"
+            data-category="General"
+            data-category-id="DIC_kwDOL1hzEc4CfEHA"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
+</div>
+<!-- End Comments
+================================================== -->
+
+<div class="hideshare"></div>
+
+<!-- Begin Related
+================================================== -->
+<div class="graybg">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            <!-- begin post -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <a href="post1.html">
+                        <img class="img-fluid img-thumb" src="assets/img/graduation1.jpg" alt="">
+                        </a>
+                        <div class="card-block">
+                            <h2 class="card-title"><a href="post1.html">The Beginning</a></h2>
+                            <div class="metafooter">
+                                <div class="wrapfooter">
+                                    <span class="meta-footer-thumb">
+                                        <a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+                                    </span>
+                                    <span class="author-meta">
+                                        <span class="post-name"><a href="author.html">Alessio</a></span><br/>
+                                    <span class="post-date">5 June 2024</span><span class="dot"></span><span class="post-read">3 min read</span>
+                                    </span>								
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			<!-- end post -->
+
+            <!-- begin post -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <a href="post4.html">
+                        <img class="img-fluid img-thumb" src="assets/img/projects1.png" alt="">
+                        </a>
+                        <div class="card-block">
+                            <h2 class="card-title"><a href="post4.html">My Current and Future Projects (2024)</a></h2>
+                            <div class="metafooter">
+                                <div class="wrapfooter">
+                                    <span class="meta-footer-thumb">
+                                        <a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+                                    </span>
+                                    <span class="author-meta">
+                                        <span class="post-name"><a href="author.html">Alessio</a></span><br/>
+                                    <span class="post-date">28 August 2024</span><span class="dot"></span><span class="post-read">8 min read</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			<!-- end post -->
+
+            <!-- begin post -->
+				<div class="col-md-4">
+					<div class="card">
+						<a href="post7.html"> 
+							<img class="img-fluid img-thumb" src="assets/img/firstHackathon1.png" alt=""> 
+						</a>
+						<div class="card-block">
+							<h2 class="card-title"><a href="post7.html">My First Hackathon</a></h2> 
+							<div class="metafooter">
+								<div class="wrapfooter">
+									<span class="meta-footer-thumb">
+										<a href="author.html"><img class="author-thumb" src="assets/img/profile-picture.png" alt=""></a>
+									</span>
+									<span class="author-meta">
+										<span class="post-name"><a href="author.html">Alessio</a></span><br/>
+										<span class="post-date">March 12 2025</span><span class="dot"></span><span class="post-read">6 min read</span> 
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- end post -->
+
+        </div>
+    </div>
+</div>
+<!-- End Related Posts
+================================================== -->
+
+<!-- Begin Twitter Timeline
+================================================== -->
+<div class="container margtop3rem">
+<!-- <a class="twitter-grid" href=""></a> <script async src="" charset="utf-8"></script> -->
+</div>
+<!-- End Twitter Timeline
+================================================== -->
+
+<!-- Begin Footer
+================================================== -->
+<div class="container">
+    <div class="footer">
+        <p class="pull-left">
+        </p>
+        <p class="pull-right">
+        </p>
+        <div class="clearfix">
+        </div>
+    </div>
+</div>
+<!-- End Footer
+================================================== -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="assets/js/mediumish.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+</body>
+</html>

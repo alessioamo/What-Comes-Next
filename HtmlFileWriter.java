@@ -152,22 +152,24 @@ public class HtmlFileWriter {
     // TODO - add new libraries to this structure
 
     public static void main(String[] args) {
-        String fileName = "post7.html";
+        String fileName = "post8.html";
         String pageTitle = "What Comes Next";
         String authorName = "Alessio";
         String authorDescription = "Just a developer who loves to create unique things!";
 
-        String postDate = "March 12 2025";
+        String postDate = "June 5 2025";
         String readTime = "6";
-        String postTitle = "My First Hackathon";
-        String featuredImage = "firstHackathon1.png";
-        String featuredImage2 = "firstHackathon2.png";
-        String postContent = "My story about completing my first hackathon.";
-        String[] tags = {"Coding", "Game Development", "Devlog", "Hackathon"};
+        String postTitle = "One Year Later";
+        String featuredImage = "oneYearLater1.png";
+        String featuredImage2 = "oneYearLater2.png";
+        String postContent = "Looking back on my first year post-graduation.";
+        String[] tags = {"Personal", "Coding", "Game Development", "Devlog", "Projects"};
         String keywords = "blog, computer, science, computer science, code, coding, programming, programmer, developer, developing, devlog, tutorial, help, devlog, graduate, graduation, " +
                             "what, comes, come, next, what comes next, what come next, " +
                             "hackathon, first, concordia, university, concordia university, conuhacks, game, development, game development, game dev, " + 
-                            "unity, wild, west, wild west, horse, cowboy, 2d, platformer, puzzle, top down, shooter, roguelike, beenox";
+                            "unity, wild, west, wild west, horse, cowboy, 2d, platformer, puzzle, top down, shooter, roguelike, beenox, " + 
+                            "discord, bot, discord bot, js, node js, node, node.js, host, hosting, free, free hosting, free host, create discord bot, create bot, " +
+                            "api, command, vscode, cloudfare, google, search, console, google search console, bootstrap, html, js, css";
 
         // Create the HTML content
         StringBuilder htmlContent = new StringBuilder();
